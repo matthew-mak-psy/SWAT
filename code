@@ -1,0 +1,3599 @@
+{
+  "components": {
+    "1": {
+      "id": "1",
+      "type": "lab.html.Page",
+      "items": {
+        "rows": [
+          [
+            {
+              "type": "text",
+              "title": "Prolific ID",
+              "content": "We need to collect your Prolific ID to be able to link your responses across days of this experiment. "
+            }
+          ],
+          [
+            {
+              "required": true,
+              "type": "input",
+              "label": "Please enter your Prolific ID below.",
+              "name": "prolific_ID"
+            }
+          ]
+        ]
+      },
+      "scrollTop": true,
+      "submitButtonText": "Continue →",
+      "submitButtonPosition": "right",
+      "files": {
+        "rows": []
+      },
+      "responses": {
+        "rows": [
+          [
+            "",
+            "",
+            "",
+            ""
+          ]
+        ]
+      },
+      "parameters": {
+        "rows": [
+          [
+            {
+              "name": "",
+              "value": "",
+              "type": "string"
+            }
+          ]
+        ]
+      },
+      "messageHandlers": {
+        "rows": [
+          [
+            {
+              "title": "",
+              "message": "",
+              "code": ""
+            }
+          ]
+        ]
+      },
+      "title": "Collect Prolific ID"
+    },
+    "2": {
+      "id": "2",
+      "type": "lab.flow.Sequence",
+      "children": [
+        "28",
+        "79",
+        "83",
+        "3",
+        "58"
+      ],
+      "files": {
+        "rows": []
+      },
+      "responses": {
+        "rows": [
+          [
+            "",
+            "",
+            "",
+            ""
+          ]
+        ]
+      },
+      "parameters": {
+        "rows": [
+          [
+            {
+              "name": "",
+              "value": "",
+              "type": "string"
+            }
+          ]
+        ]
+      },
+      "messageHandlers": {
+        "rows": [
+          [
+            {
+              "title": "",
+              "message": "",
+              "code": ""
+            }
+          ]
+        ]
+      },
+      "title": "Initial Learning - semantic relatedness"
+    },
+    "3": {
+      "id": "3",
+      "type": "lab.flow.Sequence",
+      "children": [
+        "9",
+        "10",
+        "32"
+      ],
+      "files": {
+        "rows": []
+      },
+      "responses": {
+        "rows": [
+          [
+            "",
+            "",
+            "",
+            ""
+          ]
+        ]
+      },
+      "parameters": {
+        "rows": [
+          [
+            {
+              "name": "",
+              "value": "",
+              "type": "string"
+            }
+          ]
+        ]
+      },
+      "messageHandlers": {
+        "rows": [
+          [
+            {
+              "title": "",
+              "message": "",
+              "code": ""
+            }
+          ]
+        ]
+      },
+      "title": "Practice trials"
+    },
+    "4": {
+      "id": "4",
+      "type": "lab.canvas.Screen",
+      "content": [
+        {
+          "type": "i-text",
+          "version": "3.5.1",
+          "originX": "center",
+          "originY": "center",
+          "left": 0,
+          "top": 0,
+          "width": 18.69,
+          "height": 36.16,
+          "fill": "black",
+          "stroke": null,
+          "strokeWidth": 1,
+          "strokeDashArray": null,
+          "strokeLineCap": "butt",
+          "strokeDashOffset": 0,
+          "strokeLineJoin": "round",
+          "strokeMiterLimit": 4,
+          "scaleX": 1,
+          "scaleY": 1,
+          "angle": 0,
+          "flipX": false,
+          "flipY": false,
+          "opacity": 1,
+          "shadow": null,
+          "visible": true,
+          "clipTo": null,
+          "backgroundColor": "",
+          "fillRule": "nonzero",
+          "paintFirst": "fill",
+          "globalCompositeOperation": "source-over",
+          "transformMatrix": null,
+          "skewX": 0,
+          "skewY": 0,
+          "text": "+",
+          "fontSize": 32,
+          "fontWeight": "normal",
+          "fontFamily": "sans-serif",
+          "fontStyle": "normal",
+          "lineHeight": 1.16,
+          "underline": false,
+          "overline": false,
+          "linethrough": false,
+          "textAlign": "center",
+          "textBackgroundColor": "",
+          "charSpacing": 0,
+          "id": "52",
+          "styles": {}
+        }
+      ],
+      "viewport": [
+        800,
+        600
+      ],
+      "files": {
+        "rows": []
+      },
+      "responses": {
+        "rows": [
+          [
+            "",
+            "",
+            "",
+            ""
+          ]
+        ]
+      },
+      "parameters": {
+        "rows": [
+          [
+            {
+              "name": "",
+              "value": "",
+              "type": "string"
+            }
+          ]
+        ]
+      },
+      "messageHandlers": {
+        "rows": [
+          [
+            {
+              "title": "",
+              "message": "",
+              "code": ""
+            }
+          ]
+        ]
+      },
+      "title": "Fixation",
+      "_tab": "Behavior",
+      "timeout": "500"
+    },
+    "5": {
+      "id": "5",
+      "type": "lab.flow.Sequence",
+      "children": [
+        "4",
+        "73",
+        "6"
+      ],
+      "files": {
+        "rows": []
+      },
+      "responses": {
+        "rows": [
+          [
+            "",
+            "",
+            "",
+            ""
+          ]
+        ]
+      },
+      "parameters": {
+        "rows": [
+          [
+            {
+              "name": "",
+              "value": "",
+              "type": "string"
+            }
+          ]
+        ]
+      },
+      "messageHandlers": {
+        "rows": [
+          [
+            {
+              "title": "get_response_key",
+              "message": "before:prepare",
+              "code": "const press = false\n\nthis.options.events['keypress'] = function(e) {\n  if (!press) {\n    press = true\n    this.data.press = e.key\n  }\n}"
+            }
+          ]
+        ]
+      },
+      "title": "Trial",
+      "_tab": "Scripts"
+    },
+    "6": {
+      "id": "6",
+      "type": "lab.canvas.Screen",
+      "content": [],
+      "viewport": [
+        800,
+        600
+      ],
+      "files": {
+        "rows": []
+      },
+      "responses": {
+        "rows": [
+          [
+            "",
+            "",
+            "",
+            ""
+          ]
+        ]
+      },
+      "parameters": {
+        "rows": [
+          [
+            {
+              "name": "",
+              "value": "",
+              "type": "string"
+            }
+          ]
+        ]
+      },
+      "messageHandlers": {
+        "rows": [
+          [
+            {
+              "title": "",
+              "message": "",
+              "code": ""
+            }
+          ]
+        ]
+      },
+      "title": "ITI",
+      "_tab": "Behavior",
+      "timeout": "2000"
+    },
+    "7": {
+      "id": "7",
+      "type": "lab.html.Page",
+      "items": {
+        "rows": [
+          [
+            {
+              "type": "text",
+              "title": "CONSENT TO PARTICIPATE IN RESEARCH",
+              "content": "<h4> Psychological studies of human memory, attention, and decision-making </h4>\n\n<p> You are asked to participate in a research study by Jesse Rissman, Ph.D. from the Department of Psychology at the University of California, Los Angeles. This work is sponsored by internal UCLA funding sources. You have been asked to participate in this study because you are a healthy volunteer. Your participation in this study is entirely voluntary. You should read the information below before deciding whether or not to participate. </p> \n\n<h4>Purpose of Study</h4>\n\n<p> The purpose of this study is to better understand the psychological mechanisms of memory, attention, and decision-making in healthy adults. The experiment investigates people’s ability to remember various kinds of information, as well as their ability to make judgments regarding the details and/or strength of their memories. We are interested in understanding how a person’s attentional state and current task goals serve to influence the information that gets encoded into, maintained in, or retrieved from memory. </p>\n\n<h4>Procedures </h4>\n\n<p> If you volunteer to participate in this study, we will ask to you view a series of visual stimuli (words and/or pictures) on a computer screen. For some of these stimuli, you will be asked to make keyboard and/or mouse responses according to the specified task instructions. These instructions will vary depending on the particular task condition. For example, you may be asked to make a judgement about an item's perceptual or semantic qualities, to think about the relationship between between two or more items, to decide whether a given item was encountered on a previous trial, to rate the strength of your memory for a given item or association, or to recall a specific target item from memory.\nThe research will be conducted online at Prolific Academic (https://www.prolific.co/). You may be asked to take part in 1-3 experimental sessions over the course of a one week period, each lasting no longer than four hours.\n </p>\n\n <h4>Anticipated Benefits to Subjects and/or Society </h4> \n\n <p> You will receive no direct benefit from participating in this study. However, this experiment may help contribute to our scientific knowledge about human memory, attention, and decision-making, which could have implications for our understanding of the diagnosis or treatment of neurological and/or neuropsychiatric diseases that affect these cognitive abilities.</p>\n\n <h4>Payment for Participation </h4> \n\n <p> You are entitled to be paid $7 per hour for your participation. In addition to this base compensation, participants enrolled in some multi-day variants of this study may also be eligible to receive a small completion bonus after completing all portions of the study; if applicable, the amount of this bonus payment will be stated in the experiment recruitment posting. </p>\n\n<h4>Alternatives to Participation </h4> \n\n<p>There are no alternatives to participation. If you do not wish to participate in this study, please exit the window and do not continue on to the task.  </p>\n\n<h4>Privacy and Confidentiality</h4>\n\n<p>The only people who will know that you are a research subject are members of the research team. No information about you, or provided by you during this research, will be disclosed to others without your written permission, except if necessary to protect your rights or welfare (for example, if you are injured and need emergency care), or if required by law. Prolific IDs will be stored only to provide compensation and link your data across sessions (if the task requires multiple sessions), and will not be shared with anyone outside the research team. Once sessions have been linked, Prolific IDs will be replaced with an anonymized subject identification unrelated to the Prolific ID. When the results of the research are published or discussed in conferences, no information will be included that would reveal your identity. If data are shared with other researchers, all identifying information, such as Prolific ID, will be removed.  </p>\n\n<h4>Participation and Withdrawal</h4>\n\n<p>Your participation in this research is entirely VOLUNTARY. If you decide to participate, you are free to withdraw your consent and discontinue participation at any time without consequences of any kind.</p>\n\n<h4>Identification of the Investigators</h4>\n\n<p>If you have any questions about the research, please contact Professor Jesse Rissman (email: rissman@psych.ucla.edu; phone: 310-825-4084).</p>\n\n<h4>Rights of Research Subjects</h4>\n\n<p>You may withdraw your consent at any time and discontinue participation without penalty. You are not waiving any legal claims, rights or remedies because of your participation in this research study. If you have questions about your rights as a research subject, or you have concerns or suggestions and you want to talk to someone other than the researchers, you may contact the UCLA OHRPP by phone: (310) 206-2040; by email: participants@research.ucla.edu or by mail: Box 951406, Los Angeles, CA 90095-1406.</p>\n"
+            }
+          ],
+          [
+            {
+              "required": true,
+              "type": "radio",
+              "options": [
+                {
+                  "label": "By checking this box, I affirm that I have read and I understand the information provided above and consent to participating in this study. ",
+                  "coding": "consent"
+                }
+              ],
+              "label": "Consent of Research Subject",
+              "name": "yes_consent"
+            }
+          ]
+        ]
+      },
+      "scrollTop": true,
+      "submitButtonText": "Continue →",
+      "submitButtonPosition": "right",
+      "files": {
+        "rows": []
+      },
+      "responses": {
+        "rows": [
+          [
+            "",
+            "",
+            "",
+            ""
+          ]
+        ]
+      },
+      "parameters": {
+        "rows": [
+          [
+            {
+              "name": "",
+              "value": "",
+              "type": "string"
+            }
+          ]
+        ]
+      },
+      "messageHandlers": {
+        "rows": [
+          [
+            {
+              "title": "",
+              "message": "",
+              "code": ""
+            }
+          ]
+        ]
+      },
+      "title": "Consent"
+    },
+    "9": {
+      "id": "9",
+      "type": "lab.canvas.Screen",
+      "content": [
+        {
+          "type": "i-text",
+          "version": "3.5.1",
+          "originX": "center",
+          "originY": "center",
+          "left": 0,
+          "top": 0,
+          "width": 691.89,
+          "height": 371.72,
+          "fill": "black",
+          "stroke": null,
+          "strokeWidth": 1,
+          "strokeDashArray": null,
+          "strokeLineCap": "butt",
+          "strokeDashOffset": 0,
+          "strokeLineJoin": "round",
+          "strokeMiterLimit": 4,
+          "scaleX": 1,
+          "scaleY": 1,
+          "angle": 0,
+          "flipX": false,
+          "flipY": false,
+          "opacity": 1,
+          "shadow": null,
+          "visible": true,
+          "clipTo": null,
+          "backgroundColor": "",
+          "fillRule": "nonzero",
+          "paintFirst": "fill",
+          "globalCompositeOperation": "source-over",
+          "transformMatrix": null,
+          "skewX": 0,
+          "skewY": 0,
+          "text": "Before you begin, please try some practice trials \nto get used to making the judgements. \n\nAs a reminder, you should make judgements on\nhow likely you are to remember the word pairs.\n\nThese practice pairs will NOT be tested later on.\n\nPlease press SPACE to continue.",
+          "fontSize": 32,
+          "fontWeight": "normal",
+          "fontFamily": "sans-serif",
+          "fontStyle": "normal",
+          "lineHeight": 1.16,
+          "underline": false,
+          "overline": false,
+          "linethrough": false,
+          "textAlign": "center",
+          "textBackgroundColor": "",
+          "charSpacing": 0,
+          "id": "16",
+          "styles": {}
+        }
+      ],
+      "viewport": [
+        800,
+        600
+      ],
+      "files": {
+        "rows": []
+      },
+      "responses": {
+        "rows": [
+          [
+            "continue",
+            "keypress",
+            "",
+            "Space"
+          ]
+        ]
+      },
+      "parameters": {
+        "rows": [
+          [
+            {
+              "name": "",
+              "value": "",
+              "type": "string"
+            }
+          ]
+        ]
+      },
+      "messageHandlers": {
+        "rows": [
+          [
+            {
+              "title": "",
+              "message": "",
+              "code": ""
+            }
+          ]
+        ]
+      },
+      "title": "practice instructions",
+      "_tab": "Content"
+    },
+    "10": {
+      "id": "10",
+      "type": "lab.flow.Loop",
+      "children": [
+        "5"
+      ],
+      "templateParameters": {
+        "columns": [
+          {
+            "name": "cue",
+            "type": "string"
+          },
+          {
+            "name": "target",
+            "type": "string"
+          }
+        ],
+        "rows": [
+          [
+            "PLAN",
+            "LIFE"
+          ],
+          [
+            "PATH",
+            "BICYCLE"
+          ],
+          [
+            "BRAWL",
+            "ARGUMENT"
+          ],
+          [
+            "GEESE",
+            "WINTER"
+          ]
+        ]
+      },
+      "sample": {
+        "mode": "draw-shuffle"
+      },
+      "files": {
+        "rows": []
+      },
+      "responses": {
+        "rows": [
+          [
+            "",
+            "",
+            "",
+            ""
+          ]
+        ]
+      },
+      "parameters": {
+        "rows": [
+          [
+            {
+              "name": "",
+              "value": "",
+              "type": "string"
+            }
+          ]
+        ]
+      },
+      "messageHandlers": {
+        "rows": [
+          [
+            {
+              "title": "",
+              "message": "",
+              "code": ""
+            }
+          ]
+        ]
+      },
+      "title": "Loop"
+    },
+    "11": {
+      "id": "11",
+      "title": "arrangements seq",
+      "type": "lab.flow.Sequence",
+      "children": [
+        "14",
+        "34",
+        "36",
+        "38"
+      ],
+      "parameters": {
+        "rows": [
+          [
+            {
+              "name": "",
+              "value": "",
+              "type": "string"
+            }
+          ]
+        ]
+      },
+      "plugins": [],
+      "metadata": {
+        "title": "",
+        "description": "",
+        "repository": "",
+        "contributors": ""
+      },
+      "files": {
+        "rows": []
+      },
+      "shuffle": true
+    },
+    "12": {
+      "id": "12",
+      "type": "lab.flow.Sequence",
+      "children": [
+        "13",
+        "15",
+        "18"
+      ],
+      "files": {
+        "rows": []
+      },
+      "responses": {
+        "rows": [
+          [
+            "",
+            "",
+            "",
+            ""
+          ]
+        ]
+      },
+      "parameters": {
+        "rows": [
+          [
+            {
+              "name": "",
+              "value": "",
+              "type": "string"
+            }
+          ]
+        ]
+      },
+      "messageHandlers": {
+        "rows": [
+          [
+            {
+              "title": "get_response_key",
+              "message": "before:prepare",
+              "code": ""
+            }
+          ]
+        ]
+      },
+      "title": "Trial",
+      "_tab": "Scripts"
+    },
+    "13": {
+      "id": "13",
+      "type": "lab.canvas.Screen",
+      "content": [
+        {
+          "type": "i-text",
+          "version": "3.5.1",
+          "originX": "center",
+          "originY": "center",
+          "left": 0,
+          "top": 0,
+          "width": 18.69,
+          "height": 36.16,
+          "fill": "black",
+          "stroke": null,
+          "strokeWidth": 1,
+          "strokeDashArray": null,
+          "strokeLineCap": "butt",
+          "strokeDashOffset": 0,
+          "strokeLineJoin": "round",
+          "strokeMiterLimit": 4,
+          "scaleX": 1,
+          "scaleY": 1,
+          "angle": 0,
+          "flipX": false,
+          "flipY": false,
+          "opacity": 1,
+          "shadow": null,
+          "visible": true,
+          "clipTo": null,
+          "backgroundColor": "",
+          "fillRule": "nonzero",
+          "paintFirst": "fill",
+          "globalCompositeOperation": "source-over",
+          "transformMatrix": null,
+          "skewX": 0,
+          "skewY": 0,
+          "text": "+",
+          "fontSize": 32,
+          "fontWeight": "normal",
+          "fontFamily": "sans-serif",
+          "fontStyle": "normal",
+          "lineHeight": 1.16,
+          "underline": false,
+          "overline": false,
+          "linethrough": false,
+          "textAlign": "center",
+          "textBackgroundColor": "",
+          "charSpacing": 0,
+          "id": "52",
+          "styles": {}
+        }
+      ],
+      "viewport": [
+        800,
+        600
+      ],
+      "files": {
+        "rows": []
+      },
+      "responses": {
+        "rows": [
+          [
+            "",
+            "",
+            "",
+            ""
+          ]
+        ]
+      },
+      "parameters": {
+        "rows": [
+          [
+            {
+              "name": "",
+              "value": "",
+              "type": "string"
+            }
+          ]
+        ]
+      },
+      "messageHandlers": {
+        "rows": [
+          [
+            {
+              "title": "",
+              "message": "",
+              "code": ""
+            }
+          ]
+        ]
+      },
+      "title": "Fixation",
+      "_tab": "Behavior",
+      "timeout": "500"
+    },
+    "14": {
+      "id": "14",
+      "type": "lab.html.Screen",
+      "parameters": {
+        "rows": [
+          [
+            {
+              "name": "",
+              "value": "",
+              "type": "string"
+            }
+          ]
+        ]
+      },
+      "responses": {
+        "rows": [
+          [
+            "end_button",
+            "click",
+            "button#end_button",
+            ""
+          ]
+        ]
+      },
+      "messageHandlers": {
+        "rows": [
+          [
+            {
+              "title": "new category",
+              "message": "before:prepare",
+              "code": "const el = this.options.el;    \r\nvar active = false;\r\nvar currentX;\r\nvar currentY; \r\nvar initialX;\r\nvar initialY;\r\nvar xOffset = 0;\r\nvar yOffset = 0;\r\nvar dragItem;  \r\nvar itemOrder = 0\r\nvar order_list = {}\r\n\r\n\r\nthis.options.events['mousedown'] = function(e) { \r\n  if (e.target.getAttribute('location')!=\"wordlist\") {\r\n  console.log(e.target.hasAttribute('active'))\r\n  console.log(e.target.getAttribute('initialX'))\r\n  console.log(e.target.getAttribute('xOffset'))\r\n  //console.log(e.target.getAttribute('word_name'))\r\n  //console.log(order_list[e.target.getAttribute('word_name')])\r\n  //order_list[[e.target.getAttribute('word_name')]] = order_list[[e.target.getAttribute('word_name')]].push(itemOrder);\r\n  console.log(order_list)\r\n  itemOrder = itemOrder + 1;\r\n  //console.log(itemOrder)\r\n\r\n    e.target.setAttribute('initialX', e.clientX - Number(e.target.getAttribute('xOffset')));\r\n    e.target.setAttribute('initialY',e.clientY - Number(e.target.getAttribute('yOffset')));      \r\n    if (e.target.classList.contains(\"item\")) {\r\n    e.target.setAttribute('active','true');\r\n    dragItem = e.target;\r\n    }\r\n  }\r\n  }\r\n\r\nthis.options.events['mouseup'] = function(e) { \r\n  e.target.setAttribute('initialX',e.target.getAttribute('currentX'));\r\n  e.target.setAttribute('initialY',e.target.getAttribute('currentY'));\r\n  e.target.removeAttribute('active') ;\r\n  dragItem=undefined;//drop the dragItem\r\n}\r\nthis.options.events['mousemove'] = function(e) { \r\n   if (dragItem!=undefined) {\r\n    e.preventDefault();          \r\n    dragItem.setAttribute('currentX', e.clientX - Number(dragItem.getAttribute('initialX')));\r\n    dragItem.setAttribute('currentY', e.clientY - Number(dragItem.getAttribute('initialY')));\r\n    dragItem.setAttribute('xOffset', dragItem.getAttribute('currentX'));\r\n    dragItem.setAttribute('yOffset', dragItem.getAttribute('currentY'));\r\n    setTranslate(dragItem.getAttribute('currentX'), dragItem.getAttribute('currentY'), dragItem);\r\n  }\r\n}\r\n\r\nfunction setTranslate(xPos, yPos, item) {\r\n  item.style.transform = \"translate3d(\" + xPos + \"px, \" + yPos + \"px, 0)\";\r\n  }\r\n\r\nmoveover = function (e){\r\n  if (e.target.getAttribute('location')==\"wordlist\"){\r\n    e.target.setAttribute('location','dropped')\r\n    el.querySelector('#droparea').appendChild(e.target)\r\n    e.target.setAttribute('style',\"position:absolute; top: 50px ;left:50px\")\r\n  }\r\n  if (el.querySelector('#droparea').children.length < 60){\r\n      el.querySelector('#end_button').disabled = true;\r\n    } else {\r\n      el.querySelector('#end_button').disabled = false;\r\n    }\r\n}"
+            }
+          ],
+          [
+            {
+              "title": "prepare item list",
+              "message": "run",
+              "code": "const el = this.options.el;\r\n\r\n/* create items with loop */\r\n\r\nvar item_list = [\"TIMBER\", \"PASTURE\", \"CAPTAIN\", \"PIER\", \"CALCULATOR\", \"PILLOW\", \"AIRPLANE\", \"THIRST\", \"CASHEW\", \"CARDBOARD\", \"PEAR\", \"BANANA\", \"ALLIGATOR\", \"CARTON\", \"SCIENTIST\", \"SEAM\", \"LIGHTNING\", \"CHOWDER\", \"CALENDAR\", \"BUCKLE\", \"CLOTH\",\"GENDER\", \"SEMESTER\", \"PARENT\", \"ANCHOR\", \"CANOE\", \"PAINT\", \"LAWN\", \"ANTLER\", \"CHILDREN\", \"TIME\", \"GIFT\", \"BARN\", \"JACKET\", \"TEACHER\", \"PECAN\", \"CAVERN\", \"PEBBLE\", \"BEE\", \"BRAKE\", \"CHEF\", \"BLANKET\", \"PAD\", \"ARMOR\", \"BUTLER\", \"PAVEMENT\", \"ARTERY\", \"LEASE\", \"CELLAR\", \"CIRCUS\", \"LENGTH\", \"BUN\", \"CLIFF\", \"LOAN\", \"BEACH\", \"THIMBLE\", \"BLADE\", \"BUTTERFLY\", \"TIGER\", \"BOUQUET\"]\r\n\r\nitem_list = this.random.shuffle(item_list);\r\nvar order_list= {}\r\n\r\nvar i;\r\n//for (i = 0; i < item_list.length; i++)\r\nfor (i = 0; i < 60; i++) { \r\n    var item = document.createElement(\"div\");\r\n    var word = document.createTextNode(item_list[i]);\r\n    item.setAttribute('class', 'item');\r\n    item.setAttribute('onclick','moveover(event)')\r\n    //item.setAttribute('draggable', 'true');\r\n    //item.setAttribute('data-text',\"drag\");\r\n    item.setAttribute('id', 'word'+i);\r\n    item.setAttribute('word_name',item_list[i])  \r\n    item.setAttribute('xOffset',\"0\");\r\n    item.setAttribute('yOffset',\"0\");\r\n    item.setAttribute('initialX',\"0\");\r\n    item.setAttribute('initialY',\"0\");\r\n    item.setAttribute('currentX',\"0\");\r\n    item.setAttribute('currentY',\"0\");\r\n    item.setAttribute('location','wordlist');\r\n    item.appendChild(word);\r\n    el.querySelector('#wordlist').appendChild(item);\r\n}\r\n\r\n   "
+            }
+          ],
+          [
+            {
+              "title": "collect data",
+              "message": "end",
+              "code": "const ds1 = this.options.datastore;\nconst el = this.options.el;\n\nvar words = el.querySelector('#droparea').children;\n\nvar word_list = [];\nvar x_pos = [];\nvar y_pos = [];\nvar i;\nfor (i = 0; i < words.length; i++) { \nword_list.push(words[i].getAttribute('word_name'));\nx_pos.push(words[i].getAttribute('currentX'));\ny_pos.push(words[i].getAttribute('currentY'));\n}\n\nds1.set(\"word_names\", word_list);\nds1.set(\"x_pos\", x_pos);\nds1.set(\"y_pos\", y_pos);\n"
+            }
+          ]
+        ]
+      },
+      "title": "word arrangement 1",
+      "content": "<main class=\"content-horizontal-center content-vertical-center\">\r\n  \r\n  <div id=\"screen\">\r\n\r\n    \t<div id=\"wordlist\">\r\n\t    </div>\r\n\r\n      <div class = \"window_to_place dropzone\" id=\"droparea\">\r\n      </div>\r\n\r\n      \r\n  </div>\r\n</main>\r\n\r\n<footer class=\"content-vertical-center content-horizontal-left\">\r\n  Please click on a word to bring it over to the arrangement box, then arrange the words so that the words that are more related are closer together. When you are finished, please press the submit button:<br><br>\r\n  <button id=\"end_button\" name=\"end_button\" type=\"button\" disabled> Submit Arrangement </button>\r\n  \r\n</footer>",
+      "_tab": "Scripts",
+      "tardy": true,
+      "files": {
+        "rows": []
+      }
+    },
+    "15": {
+      "id": "15",
+      "type": "lab.html.Form",
+      "content": "<main class=\"content-horizontal-center content-vertical-center\"> \n  <table class=\"table-plain w-m\" style=\"font-size: 2rem;\">\n    <tr>\n      <td style=\"width: 200px\">${ parameters.cue }</td>\n      <td> &mdash; </td>\n      <td style=\"width: 200px\">${ parameters.target }</td>\n    </tr>\n  </table>  \n</main>\n\n<footer>\n  How related are the words in the pair? <br>\n    1 - not related <br>\n    2 - weakly related <br>\n    3 - moderately related <br>\n    4 - strongly related <br>\n</footer>",
+      "scrollTop": true,
+      "files": {
+        "rows": []
+      },
+      "responses": {
+        "rows": [
+          [
+            "",
+            "",
+            "",
+            ""
+          ]
+        ]
+      },
+      "parameters": {
+        "rows": [
+          [
+            {
+              "name": "",
+              "value": "",
+              "type": "string"
+            }
+          ]
+        ]
+      },
+      "messageHandlers": {
+        "rows": [
+          [
+            {
+              "title": "get_key_press",
+              "message": "before:prepare",
+              "code": "let response = false\n\nthis.options.events['keypress'] = function(e) {\n  if (!response) {\n    response = true\n    this.data.response = e.key\n    this.data.reaction_time = e.timeStamp\n  }\n}\n\n"
+            }
+          ]
+        ]
+      },
+      "title": "word pair",
+      "_tab": "Content",
+      "timeout": "4000"
+    },
+    "18": {
+      "id": "18",
+      "type": "lab.canvas.Screen",
+      "content": [],
+      "viewport": [
+        800,
+        600
+      ],
+      "files": {
+        "rows": []
+      },
+      "responses": {
+        "rows": [
+          [
+            "",
+            "",
+            "",
+            ""
+          ]
+        ]
+      },
+      "parameters": {
+        "rows": [
+          [
+            {
+              "name": "",
+              "value": "",
+              "type": "string"
+            }
+          ]
+        ]
+      },
+      "messageHandlers": {
+        "rows": [
+          [
+            {
+              "title": "",
+              "message": "",
+              "code": ""
+            }
+          ]
+        ]
+      },
+      "title": "ITI",
+      "_tab": "Behavior",
+      "timeout": "2000"
+    },
+    "20": {
+      "id": "20",
+      "type": "lab.flow.Sequence",
+      "children": [
+        "33",
+        "84",
+        "44"
+      ],
+      "files": {
+        "rows": []
+      },
+      "responses": {
+        "rows": [
+          [
+            "",
+            "",
+            "",
+            ""
+          ]
+        ]
+      },
+      "parameters": {
+        "rows": [
+          [
+            {
+              "name": "",
+              "value": "",
+              "type": "string"
+            }
+          ]
+        ]
+      },
+      "messageHandlers": {
+        "rows": [
+          [
+            {
+              "title": "",
+              "message": "",
+              "code": ""
+            }
+          ]
+        ]
+      },
+      "title": "Test/re-study"
+    },
+    "24": {
+      "id": "24",
+      "type": "lab.html.Form",
+      "content": "Thank you for participating in part 1 of our experiment! <br>\nYou will receive a notification tomorrow via Prolific about part 2. <br>\nThis page will automatically redirect you to Prolific to give you a code for your compensation for this part in 5 seconds. <br>\nIf it does not, please copy the following link into a new browser window: https://app.prolific.co/submissions/complete?cc=275B15A7",
+      "scrollTop": true,
+      "files": {
+        "rows": []
+      },
+      "responses": {
+        "rows": [
+          [
+            "",
+            "",
+            "",
+            ""
+          ]
+        ]
+      },
+      "parameters": {
+        "rows": [
+          [
+            {
+              "name": "",
+              "value": "",
+              "type": "string"
+            }
+          ]
+        ]
+      },
+      "messageHandlers": {
+        "rows": [
+          [
+            {
+              "title": "",
+              "message": "end",
+              "code": "window.open(\"https://app.prolific.co/submissions/complete?cc=275B15A7\", \"_blank\");  \n"
+            }
+          ]
+        ]
+      },
+      "title": "End Experiment",
+      "_tab": "Scripts",
+      "timeout": "5000"
+    },
+    "26": {
+      "id": "26",
+      "type": "lab.canvas.Screen",
+      "content": [
+        {
+          "type": "i-text",
+          "version": "3.5.1",
+          "originX": "center",
+          "originY": "center",
+          "left": 0,
+          "top": 0,
+          "width": 776.67,
+          "height": 287.83,
+          "fill": "black",
+          "stroke": null,
+          "strokeWidth": 1,
+          "strokeDashArray": null,
+          "strokeLineCap": "butt",
+          "strokeDashOffset": 0,
+          "strokeLineJoin": "round",
+          "strokeMiterLimit": 4,
+          "scaleX": 1,
+          "scaleY": 1,
+          "angle": 0,
+          "flipX": false,
+          "flipY": false,
+          "opacity": 1,
+          "shadow": null,
+          "visible": true,
+          "clipTo": null,
+          "backgroundColor": "",
+          "fillRule": "nonzero",
+          "paintFirst": "fill",
+          "globalCompositeOperation": "source-over",
+          "transformMatrix": null,
+          "skewX": 0,
+          "skewY": 0,
+          "text": "Welcome to the first part our our study! \n\nToday, you will be making judgements on the similarity \nof words, and then learning a series of word pairs.\nThe tasks today will take approximately 1 hour.\n\nPlease press SPACE to continue",
+          "fontSize": 32,
+          "fontWeight": "normal",
+          "fontFamily": "sans-serif",
+          "fontStyle": "normal",
+          "lineHeight": 1.16,
+          "underline": false,
+          "overline": false,
+          "linethrough": false,
+          "textAlign": "center",
+          "textBackgroundColor": "",
+          "charSpacing": 0,
+          "id": "303",
+          "styles": {}
+        }
+      ],
+      "viewport": [
+        800,
+        600
+      ],
+      "files": {
+        "rows": []
+      },
+      "responses": {
+        "rows": [
+          [
+            "continue",
+            "keypress",
+            "",
+            "Space"
+          ]
+        ]
+      },
+      "parameters": {
+        "rows": [
+          [
+            {
+              "name": "",
+              "value": "",
+              "type": "string"
+            }
+          ]
+        ]
+      },
+      "messageHandlers": {
+        "rows": [
+          [
+            {
+              "title": "",
+              "message": "",
+              "code": ""
+            }
+          ]
+        ]
+      },
+      "title": "Intro",
+      "_tab": "Content"
+    },
+    "27": {
+      "id": "27",
+      "type": "lab.flow.Sequence",
+      "children": [
+        "26"
+      ],
+      "files": {
+        "rows": []
+      },
+      "responses": {
+        "rows": [
+          [
+            "",
+            "",
+            "",
+            ""
+          ]
+        ]
+      },
+      "parameters": {
+        "rows": [
+          [
+            {
+              "name": "",
+              "value": "",
+              "type": "string"
+            }
+          ]
+        ]
+      },
+      "messageHandlers": {
+        "rows": [
+          [
+            {
+              "title": "",
+              "message": "",
+              "code": ""
+            }
+          ]
+        ]
+      },
+      "title": "Instructions",
+      "_tab": "Content",
+      "_collapsed": false
+    },
+    "28": {
+      "id": "28",
+      "type": "lab.canvas.Screen",
+      "content": [
+        {
+          "type": "i-text",
+          "version": "3.5.1",
+          "originX": "center",
+          "originY": "center",
+          "left": 0,
+          "top": -125,
+          "width": 715.94,
+          "height": 288.56,
+          "fill": "black",
+          "stroke": null,
+          "strokeWidth": 1,
+          "strokeDashArray": null,
+          "strokeLineCap": "butt",
+          "strokeDashOffset": 0,
+          "strokeLineJoin": "round",
+          "strokeMiterLimit": 4,
+          "scaleX": 1,
+          "scaleY": 1,
+          "angle": 0,
+          "flipX": false,
+          "flipY": false,
+          "opacity": 1,
+          "shadow": null,
+          "visible": true,
+          "clipTo": null,
+          "backgroundColor": "",
+          "fillRule": "nonzero",
+          "paintFirst": "fill",
+          "globalCompositeOperation": "source-over",
+          "transformMatrix": null,
+          "skewX": 0,
+          "skewY": 0,
+          "text": "For the next part of the experiment, you will be presented \nwith a series of word pairs, and your task \nis to MEMORIZE them.\nSome of the pairs have words that are closely related\n to each other, and other pairs have words that \nare less related.\nFor each pair, please use the keyboard to make \na judgement of how related the words in the pair are:",
+          "fontSize": "28",
+          "fontWeight": "normal",
+          "fontFamily": "sans-serif",
+          "fontStyle": "normal",
+          "lineHeight": 1.16,
+          "underline": false,
+          "overline": false,
+          "linethrough": false,
+          "textAlign": "center",
+          "textBackgroundColor": "",
+          "charSpacing": 0,
+          "id": "331",
+          "styles": {}
+        },
+        {
+          "type": "i-text",
+          "version": "3.5.1",
+          "originX": "left",
+          "originY": "center",
+          "left": -125,
+          "top": 89,
+          "width": 272.36,
+          "height": 141.75,
+          "fill": "black",
+          "stroke": null,
+          "strokeWidth": 1,
+          "strokeDashArray": null,
+          "strokeLineCap": "butt",
+          "strokeDashOffset": 0,
+          "strokeLineJoin": "round",
+          "strokeMiterLimit": 4,
+          "scaleX": 1,
+          "scaleY": 1,
+          "angle": 0,
+          "flipX": false,
+          "flipY": false,
+          "opacity": 1,
+          "shadow": null,
+          "visible": true,
+          "clipTo": null,
+          "backgroundColor": "",
+          "fillRule": "nonzero",
+          "paintFirst": "fill",
+          "globalCompositeOperation": "source-over",
+          "transformMatrix": null,
+          "skewX": 0,
+          "skewY": 0,
+          "text": "1 - not related\n2 - weakly related\n3 - moderately related\n4 - strongly related",
+          "fontSize": "28",
+          "fontWeight": "normal",
+          "fontFamily": "sans-serif",
+          "fontStyle": "normal",
+          "lineHeight": 1.16,
+          "underline": false,
+          "overline": false,
+          "linethrough": false,
+          "textAlign": "left",
+          "textBackgroundColor": "",
+          "charSpacing": 0,
+          "id": "342",
+          "styles": {}
+        },
+        {
+          "type": "i-text",
+          "version": "3.5.1",
+          "originX": "center",
+          "originY": "center",
+          "left": -12,
+          "top": 260,
+          "width": 483.53,
+          "height": 31.64,
+          "fill": "black",
+          "stroke": null,
+          "strokeWidth": 1,
+          "strokeDashArray": null,
+          "strokeLineCap": "butt",
+          "strokeDashOffset": 0,
+          "strokeLineJoin": "round",
+          "strokeMiterLimit": 4,
+          "scaleX": 1,
+          "scaleY": 1,
+          "angle": 0,
+          "flipX": false,
+          "flipY": false,
+          "opacity": 1,
+          "shadow": null,
+          "visible": true,
+          "clipTo": null,
+          "backgroundColor": "",
+          "fillRule": "nonzero",
+          "paintFirst": "fill",
+          "globalCompositeOperation": "source-over",
+          "transformMatrix": null,
+          "skewX": 0,
+          "skewY": 0,
+          "text": "Please press SPACE to begin the task.",
+          "fontSize": "28",
+          "fontWeight": "normal",
+          "fontFamily": "sans-serif",
+          "fontStyle": "normal",
+          "lineHeight": 1.16,
+          "underline": false,
+          "overline": false,
+          "linethrough": false,
+          "textAlign": "center",
+          "textBackgroundColor": "",
+          "charSpacing": 0,
+          "id": "387",
+          "styles": {}
+        },
+        {
+          "type": "i-text",
+          "version": "3.5.1",
+          "originX": "center",
+          "originY": "center",
+          "left": 0,
+          "top": 200,
+          "width": 574.31,
+          "height": 68.34,
+          "fill": "black",
+          "stroke": null,
+          "strokeWidth": 1,
+          "strokeDashArray": null,
+          "strokeLineCap": "butt",
+          "strokeDashOffset": 0,
+          "strokeLineJoin": "round",
+          "strokeMiterLimit": 4,
+          "scaleX": 1,
+          "scaleY": 1,
+          "angle": 0,
+          "flipX": false,
+          "flipY": false,
+          "opacity": 1,
+          "shadow": null,
+          "visible": true,
+          "clipTo": null,
+          "backgroundColor": "",
+          "fillRule": "nonzero",
+          "paintFirst": "fill",
+          "globalCompositeOperation": "source-over",
+          "transformMatrix": null,
+          "skewX": 0,
+          "skewY": 0,
+          "text": "Making a judgement will not advance the trial, \nso please be patient. ",
+          "fontSize": "28",
+          "fontWeight": "normal",
+          "fontFamily": "sans-serif",
+          "fontStyle": "normal",
+          "lineHeight": 1.16,
+          "underline": false,
+          "overline": false,
+          "linethrough": false,
+          "textAlign": "center",
+          "textBackgroundColor": "",
+          "charSpacing": 0,
+          "id": "146",
+          "styles": {}
+        }
+      ],
+      "viewport": [
+        800,
+        600
+      ],
+      "files": {
+        "rows": []
+      },
+      "responses": {
+        "rows": [
+          [
+            "continue",
+            "keypress",
+            "",
+            "Space"
+          ]
+        ]
+      },
+      "parameters": {
+        "rows": [
+          [
+            {
+              "name": "",
+              "value": "",
+              "type": "string"
+            }
+          ]
+        ]
+      },
+      "messageHandlers": {
+        "rows": [
+          [
+            {
+              "title": "",
+              "message": "",
+              "code": ""
+            }
+          ]
+        ]
+      },
+      "title": "Instructions",
+      "_tab": "Content"
+    },
+    "29": {
+      "id": "29",
+      "type": "lab.flow.Sequence",
+      "children": [
+        "7"
+      ],
+      "files": {
+        "rows": []
+      },
+      "responses": {
+        "rows": [
+          [
+            "",
+            "",
+            "",
+            ""
+          ]
+        ]
+      },
+      "parameters": {
+        "rows": [
+          [
+            {
+              "name": "",
+              "value": "",
+              "type": "string"
+            }
+          ]
+        ]
+      },
+      "messageHandlers": {
+        "rows": [
+          [
+            {
+              "title": "",
+              "message": "",
+              "code": ""
+            }
+          ]
+        ]
+      },
+      "title": "Consent"
+    },
+    "31": {
+      "id": "31",
+      "type": "lab.flow.Loop",
+      "children": [
+        "35"
+      ],
+      "templateParameters": {
+        "columns": [
+          {
+            "name": "cue",
+            "type": "string"
+          },
+          {
+            "name": "target",
+            "type": "string"
+          },
+          {
+            "name": "relatedness",
+            "type": "string"
+          },
+          {
+            "name": "show",
+            "type": "string"
+          },
+          {
+            "name": "group",
+            "type": "string"
+          }
+        ],
+        "rows": [
+          [
+            "BEACH",
+            "SUN",
+            "related",
+            "SUN",
+            "B"
+          ],
+          [
+            "GENDER",
+            "FEMALE",
+            "related",
+            "FEMALE",
+            "A"
+          ],
+          [
+            "CANOE",
+            "WATER",
+            "related",
+            "WATER",
+            "A"
+          ],
+          [
+            "PILLOW",
+            "SLEEP",
+            "related",
+            "SLEEP",
+            "A"
+          ],
+          [
+            "SEAM",
+            "PANTS",
+            "related",
+            "PANTS",
+            "A"
+          ],
+          [
+            "CARTON",
+            "MILK",
+            "related",
+            "MILK",
+            "B"
+          ],
+          [
+            "THIRST",
+            "HUNGER",
+            "related",
+            "HUNGER",
+            "A"
+          ],
+          [
+            "CLIFF",
+            "MOUNTAIN",
+            "related",
+            "MOUNTAIN",
+            "A"
+          ],
+          [
+            "BUN",
+            "BREAD",
+            "related",
+            "BREAD",
+            "A"
+          ],
+          [
+            "BLADE",
+            "KNIFE",
+            "related",
+            "KNIFE",
+            "A"
+          ],
+          [
+            "PARENT",
+            "MOTHER",
+            "related",
+            "MOTHER",
+            "A"
+          ],
+          [
+            "CARDBOARD",
+            "PAPER",
+            "related",
+            "PAPER",
+            "B"
+          ],
+          [
+            "LOAN",
+            "MONEY",
+            "related",
+            "MONEY",
+            "B"
+          ],
+          [
+            "LEASE",
+            "APARTMENT",
+            "related",
+            "APARTMENT",
+            "B"
+          ],
+          [
+            "THIMBLE",
+            "FINGER",
+            "related",
+            "FINGER",
+            "B"
+          ],
+          [
+            "SCIENTIST",
+            "RIVER",
+            "unrelated",
+            "RIVER",
+            "A"
+          ],
+          [
+            "PIER",
+            "MEAT",
+            "unrelated",
+            "MEAT",
+            "A"
+          ],
+          [
+            "BOUQUET",
+            "DOG",
+            "unrelated",
+            "DOG",
+            "B"
+          ],
+          [
+            "PECAN",
+            "WORLD",
+            "unrelated",
+            "WORLD",
+            "B"
+          ],
+          [
+            "JACKET",
+            "TEMPERATURE",
+            "unrelated",
+            "TEMPERATURE",
+            "A"
+          ],
+          [
+            "ANTLER",
+            "LOVE",
+            "unrelated",
+            "LOVE",
+            "A"
+          ],
+          [
+            "CHOWDER",
+            "BOOK",
+            "unrelated",
+            "BOOK",
+            "A"
+          ],
+          [
+            "LIGHTNING",
+            "HAIR",
+            "unrelated",
+            "HAIR",
+            "A"
+          ],
+          [
+            "LAWN",
+            "ELECTRICITY",
+            "unrelated",
+            "ELECTRICITY",
+            "B"
+          ],
+          [
+            "CASHEW",
+            "SKIN",
+            "unrelated",
+            "SKIN",
+            "A"
+          ],
+          [
+            "TEACHER",
+            "CHICKEN",
+            "unrelated",
+            "CHICKEN",
+            "A"
+          ],
+          [
+            "GIFT",
+            "PHONE",
+            "unrelated",
+            "PHONE",
+            "A"
+          ],
+          [
+            "SEMESTER",
+            "JOB",
+            "unrelated",
+            "JOB",
+            "B"
+          ],
+          [
+            "CHILDREN",
+            "BIRD",
+            "unrelated",
+            "BIRD",
+            "B"
+          ],
+          [
+            "CIRCUS",
+            "SPACE",
+            "unrelated",
+            "SPACE",
+            "B"
+          ],
+          [
+            "PEBBLE",
+            "STONE",
+            "related",
+            "STONE",
+            "B"
+          ],
+          [
+            "TIME",
+            "CLOCK",
+            "related",
+            "CLOCK",
+            "B"
+          ],
+          [
+            "TIMBER",
+            "TREE",
+            "related",
+            "TREE",
+            "A"
+          ],
+          [
+            "BEE",
+            "HONEY",
+            "related",
+            "HONEY",
+            "A"
+          ],
+          [
+            "CALCULATOR",
+            "MATH",
+            "related",
+            "MATH",
+            "B"
+          ],
+          [
+            "BLANKET",
+            "BED",
+            "related",
+            "BED",
+            "A"
+          ],
+          [
+            "CALENDAR",
+            "DAY",
+            "related",
+            "DAY",
+            "B"
+          ],
+          [
+            "BUCKLE",
+            "SHOE",
+            "related",
+            "SHOE",
+            "B"
+          ],
+          [
+            "PASTURE",
+            "COW",
+            "related",
+            "COW",
+            "B"
+          ],
+          [
+            "ANCHOR",
+            "BOAT",
+            "related",
+            "BOAT",
+            "A"
+          ],
+          [
+            "BRAKE",
+            "CAR",
+            "related",
+            "CAR",
+            "B"
+          ],
+          [
+            "CHEF",
+            "FOOD",
+            "related",
+            "FOOD",
+            "A"
+          ],
+          [
+            "PAINT",
+            "COLOR",
+            "related",
+            "COLOR",
+            "B"
+          ],
+          [
+            "PAVEMENT",
+            "STREET",
+            "related",
+            "STREET",
+            "A"
+          ],
+          [
+            "TIGER",
+            "CAT",
+            "related",
+            "CAT",
+            "B"
+          ],
+          [
+            "BANANA",
+            "BOSS",
+            "unrelated",
+            "BOSS",
+            "A"
+          ],
+          [
+            "ARMOR",
+            "MOVIE",
+            "unrelated",
+            "MOVIE",
+            "B"
+          ],
+          [
+            "PAD",
+            "PUPPY",
+            "unrelated",
+            "PUPPY",
+            "A"
+          ],
+          [
+            "CELLAR",
+            "TIN",
+            "unrelated",
+            "TIN",
+            "B"
+          ],
+          [
+            "AIRPLANE",
+            "HOUSE",
+            "unrelated",
+            "HOUSE",
+            "A"
+          ],
+          [
+            "CAVERN",
+            "EAT",
+            "unrelated",
+            "EAT",
+            "B"
+          ],
+          [
+            "BUTTERFLY",
+            "WOOD",
+            "unrelated",
+            "WOOD",
+            "B"
+          ],
+          [
+            "LENGTH",
+            "HUT",
+            "unrelated",
+            "HUT",
+            "B"
+          ],
+          [
+            "BUTLER",
+            "HALF",
+            "unrelated",
+            "HALF",
+            "B"
+          ],
+          [
+            "PEAR",
+            "ANIMAL",
+            "unrelated",
+            "ANIMAL",
+            "A"
+          ],
+          [
+            "ALLIGATOR",
+            "NURSE",
+            "unrelated",
+            "NURSE",
+            "A"
+          ],
+          [
+            "CAPTAIN",
+            "FRIEND",
+            "unrelated",
+            "FRIEND",
+            "A"
+          ],
+          [
+            "ARTERY",
+            "ARROW",
+            "unrelated",
+            "ARROW",
+            "B"
+          ],
+          [
+            "BARN",
+            "LAKE",
+            "unrelated",
+            "LAKE",
+            "B"
+          ],
+          [
+            "CLOTH",
+            "WHEEL",
+            "unrelated",
+            "WHEEL",
+            "B"
+          ]
+        ]
+      },
+      "sample": {
+        "mode": "draw-shuffle",
+        "n": ""
+      },
+      "files": {
+        "rows": []
+      },
+      "responses": {
+        "rows": [
+          [
+            "",
+            "",
+            "",
+            ""
+          ]
+        ]
+      },
+      "parameters": {
+        "rows": [
+          [
+            {
+              "name": "",
+              "value": "",
+              "type": "string"
+            }
+          ]
+        ]
+      },
+      "messageHandlers": {
+        "rows": [
+          [
+            {
+              "title": "",
+              "message": "",
+              "code": ""
+            }
+          ]
+        ]
+      },
+      "title": "Loop",
+      "_tab": "Content"
+    },
+    "32": {
+      "id": "32",
+      "type": "lab.canvas.Screen",
+      "content": [
+        {
+          "type": "i-text",
+          "version": "3.5.1",
+          "originX": "center",
+          "originY": "center",
+          "left": 0,
+          "top": 0,
+          "width": 797.58,
+          "height": 203.94,
+          "fill": "black",
+          "stroke": null,
+          "strokeWidth": 1,
+          "strokeDashArray": null,
+          "strokeLineCap": "butt",
+          "strokeDashOffset": 0,
+          "strokeLineJoin": "round",
+          "strokeMiterLimit": 4,
+          "scaleX": 1,
+          "scaleY": 1,
+          "angle": 0,
+          "flipX": false,
+          "flipY": false,
+          "opacity": 1,
+          "shadow": null,
+          "visible": true,
+          "clipTo": null,
+          "backgroundColor": "",
+          "fillRule": "nonzero",
+          "paintFirst": "fill",
+          "globalCompositeOperation": "source-over",
+          "transformMatrix": null,
+          "skewX": 0,
+          "skewY": 0,
+          "text": "Nice job! \n\nNow you're ready to start the first part of the experiment.\n\nPlease press SPACE to begin.",
+          "fontSize": 32,
+          "fontWeight": "normal",
+          "fontFamily": "sans-serif",
+          "fontStyle": "normal",
+          "lineHeight": 1.16,
+          "underline": false,
+          "overline": false,
+          "linethrough": false,
+          "textAlign": "center",
+          "textBackgroundColor": "",
+          "charSpacing": 0,
+          "id": "85",
+          "styles": {}
+        }
+      ],
+      "viewport": [
+        800,
+        600
+      ],
+      "files": {
+        "rows": []
+      },
+      "responses": {
+        "rows": [
+          [
+            "continue",
+            "keypress",
+            "",
+            "Space"
+          ]
+        ]
+      },
+      "parameters": {
+        "rows": [
+          [
+            {
+              "name": "",
+              "value": "",
+              "type": "string"
+            }
+          ]
+        ]
+      },
+      "messageHandlers": {
+        "rows": [
+          [
+            {
+              "title": "",
+              "message": "",
+              "code": ""
+            }
+          ]
+        ]
+      },
+      "title": "Continue to experiment",
+      "_tab": "Behavior"
+    },
+    "33": {
+      "id": "33",
+      "type": "lab.canvas.Screen",
+      "content": [
+        {
+          "type": "i-text",
+          "version": "3.5.1",
+          "originX": "center",
+          "originY": "center",
+          "left": 0,
+          "top": 0,
+          "width": 798.63,
+          "height": 665.34,
+          "fill": "black",
+          "stroke": null,
+          "strokeWidth": 1,
+          "strokeDashArray": null,
+          "strokeLineCap": "butt",
+          "strokeDashOffset": 0,
+          "strokeLineJoin": "round",
+          "strokeMiterLimit": 4,
+          "scaleX": 1,
+          "scaleY": 1,
+          "angle": 0,
+          "flipX": false,
+          "flipY": false,
+          "opacity": 1,
+          "shadow": null,
+          "visible": true,
+          "clipTo": null,
+          "backgroundColor": "",
+          "fillRule": "nonzero",
+          "paintFirst": "fill",
+          "globalCompositeOperation": "source-over",
+          "transformMatrix": null,
+          "skewX": 0,
+          "skewY": 0,
+          "text": "In this part, you will see each word pair one more time. \nHalf of the pairs will be presented intact with both words.\nThe other half, however, will be presented with the \nfirst word, but instead of the second, you will see ????.\nFor these trials, please try to recall the second \nword of the pair.\n\nEvery trial will give you an opportunity to think of the\npair, and then ask you to type the SECOND word in \nthe text box below the pair for EVERY TRIAL, \nregardless of whether you see the word or ????.\n\nIf you can not remember the second word, \nplease make a guess or leave the box blank.\n\nPlease press SPACE to start the task.",
+          "fontSize": 32,
+          "fontWeight": "normal",
+          "fontFamily": "sans-serif",
+          "fontStyle": "normal",
+          "lineHeight": 1.16,
+          "underline": false,
+          "overline": false,
+          "linethrough": false,
+          "textAlign": "center",
+          "textBackgroundColor": "",
+          "charSpacing": 0,
+          "id": "657",
+          "styles": {}
+        }
+      ],
+      "viewport": [
+        800,
+        600
+      ],
+      "files": {
+        "rows": []
+      },
+      "responses": {
+        "rows": [
+          [
+            "continue",
+            "keypress",
+            "",
+            "Space"
+          ]
+        ]
+      },
+      "parameters": {
+        "rows": [
+          [
+            {
+              "name": "",
+              "value": "",
+              "type": "string"
+            }
+          ]
+        ]
+      },
+      "messageHandlers": {
+        "rows": [
+          [
+            {
+              "title": "",
+              "message": "",
+              "code": ""
+            }
+          ]
+        ]
+      },
+      "title": "Instructions",
+      "_tab": "Content"
+    },
+    "34": {
+      "id": "34",
+      "type": "lab.html.Screen",
+      "parameters": {
+        "rows": [
+          [
+            {
+              "name": "",
+              "value": "",
+              "type": "string"
+            }
+          ]
+        ]
+      },
+      "responses": {
+        "rows": [
+          [
+            "end_button",
+            "click",
+            "button#end_button",
+            ""
+          ]
+        ]
+      },
+      "messageHandlers": {
+        "rows": [
+          [
+            {
+              "title": "new category",
+              "message": "before:prepare",
+              "code": "const el = this.options.el;    \r\nvar active = false;\r\nvar currentX;\r\nvar currentY; \r\nvar initialX;\r\nvar initialY;\r\nvar xOffset = 0;\r\nvar yOffset = 0;\r\nvar dragItem;  \r\n\r\nthis.options.events['mousedown'] = function(e) { \r\n  if (e.target.getAttribute('location')!=\"wordlist\") {\r\n  console.log(e.target.hasAttribute('active'))\r\n  console.log(e.target.getAttribute('initialX'))\r\n  console.log(e.target.getAttribute('xOffset'))\r\n    e.target.setAttribute('initialX', e.clientX - Number(e.target.getAttribute('xOffset')));\r\n    e.target.setAttribute('initialY',e.clientY - Number(e.target.getAttribute('yOffset')));      \r\n    if (e.target.classList.contains(\"item\")) {\r\n    e.target.setAttribute('active','true');\r\n    dragItem = e.target;\r\n    }\r\n  }\r\n  }\r\n\r\nthis.options.events['mouseup'] = function(e) { \r\n  e.target.setAttribute('initialX',e.target.getAttribute('currentX'));\r\n  e.target.setAttribute('initialY',e.target.getAttribute('currentY'));\r\n  e.target.removeAttribute('active') ;\r\n  dragItem=undefined;//drop the dragItem\r\n}\r\nthis.options.events['mousemove'] = function(e) { \r\n   if (dragItem!=undefined) {\r\n    e.preventDefault();          \r\n    dragItem.setAttribute('currentX', e.clientX - Number(dragItem.getAttribute('initialX')));\r\n    dragItem.setAttribute('currentY', e.clientY - Number(dragItem.getAttribute('initialY')));\r\n    dragItem.setAttribute('xOffset', dragItem.getAttribute('currentX'));\r\n    dragItem.setAttribute('yOffset', dragItem.getAttribute('currentY'));\r\n    setTranslate(dragItem.getAttribute('currentX'), dragItem.getAttribute('currentY'), dragItem);\r\n  }\r\n}\r\n\r\nfunction setTranslate(xPos, yPos, item) {\r\n  item.style.transform = \"translate3d(\" + xPos + \"px, \" + yPos + \"px, 0)\";\r\n  }\r\n\r\nmoveover = function (e){\r\n  if (e.target.getAttribute('location')==\"wordlist\"){\r\n    e.target.setAttribute('location','dropped')\r\n    el.querySelector('#droparea').appendChild(e.target)\r\n    e.target.setAttribute('style',\"position:absolute; top: 50px ;left:50px\")\r\n  }\r\n  if (el.querySelector('#droparea').children.length < 60){\r\n      el.querySelector('#end_button').disabled = true;\r\n    } else {\r\n      el.querySelector('#end_button').disabled = false;\r\n    }\r\n}"
+            }
+          ],
+          [
+            {
+              "title": "prepare item list",
+              "message": "run",
+              "code": "const el = this.options.el;\r\n\r\n/* create items with loop */\r\n\r\nvar item_list = [\"TREE\", \"COW\", \"FRIEND\", \"MEAT\", \"MATH\", \"SLEEP\", \"HOUSE\", \"HUNGER\", \"SKIN\", \"PAPER\", \"ANIMAL\", \"BOSS\", \"NURSE\", \"MILK\", \"RIVER\", \"PANTS\", \"HAIR\", \"BOOK\", \"DAY\", \"SHOE\", \"WHEEL\", \"FEMALE\", \"JOB\", \"MOTHER\", \"BOAT\", \"WATER\", \"COLOR\", \"ELECTRICITY\", \"LOVE\", \"BIRD\", \"CLOCK\", \"PHONE\", \"LAKE\", \"TEMPERATURE\", \"CHICKEN\", \"WORLD\", \"EAT\", \"STONE\", \"HONEY\", \"CAR\", \"FOOD\", \"BED\", \"PUPPY\", \"MOVIE\", \"HALF\", \"STREET\", \"ARROW\", \"APARTMENT\", \"TIN\", \"SPACE\", \"HUT\", \"BREAD\", \"MOUNTAIN\", \"MONEY\", \"SUN\", \"FINGER\", \"KNIFE\", \"WOOD\", \"CAT\", \"DOG\"]\r\n\r\nitem_list = this.random.shuffle(item_list);\r\n\r\nvar i;\r\n//for (i = 0; i < item_list.length; i++)\r\nfor (i = 0; i < 60; i++) { \r\n    var item = document.createElement(\"div\");\r\n    var word = document.createTextNode(item_list[i]);\r\n    item.setAttribute('class', 'item');\r\n    item.setAttribute('onclick','moveover(event)')\r\n    //item.setAttribute('draggable', 'true');\r\n    //item.setAttribute('data-text',\"drag\");\r\n    item.setAttribute('id', 'word'+i);\r\n    item.setAttribute('word_name',item_list[i])  \r\n    item.setAttribute('xOffset',\"0\");\r\n    item.setAttribute('yOffset',\"0\");\r\n    item.setAttribute('initialX',\"0\");\r\n    item.setAttribute('initialY',\"0\");\r\n     item.setAttribute('currentX',\"0\");\r\n    item.setAttribute('currentY',\"0\");\r\n    item.setAttribute('location','wordlist')\r\n    item.appendChild(word);\r\n    el.querySelector('#wordlist').appendChild(item);\r\n}\r\n\r\n   "
+            }
+          ],
+          [
+            {
+              "title": "collect data",
+              "message": "end",
+              "code": "const ds2 = this.options.datastore;\nconst el = this.options.el;\n\nvar words = el.querySelector('#droparea').children;\n\nvar word_list = [];\nvar x_pos = [];\nvar y_pos = [];\nvar i;\nfor (i = 0; i < words.length; i++) { \nword_list.push(words[i].getAttribute('word_name'));\nx_pos.push(words[i].getAttribute('currentX'));\ny_pos.push(words[i].getAttribute('currentY'));\n}\n\nds2.set(\"word_names\", word_list);\nds2.set(\"x_pos\", x_pos);\nds2.set(\"y_pos\", y_pos);\n"
+            }
+          ]
+        ]
+      },
+      "title": "word arrangement 2",
+      "content": "<main class=\"content-horizontal-center content-vertical-center\">\r\n  \r\n  <div id=\"screen\">\r\n\r\n    \t<div id=\"wordlist\">\r\n\t    </div>\r\n\r\n      <div class = \"window_to_place dropzone\" id=\"droparea\">\r\n      </div>\r\n\r\n      \r\n  </div>\r\n</main>\r\n\r\n<footer class=\"content-vertical-center content-horizontal-left\">\r\n  Please click on a word to bring it over to the arrangement box, then arrange the words so that the words that are more related are closer together. When you are finished, please press the submit button:<br><br>\r\n  <button id=\"end_button\" name=\"end_button\" type=\"button\" disabled> Submit Arrangement </button>\r\n  \r\n</footer>",
+      "_tab": "Scripts",
+      "tardy": true,
+      "files": {
+        "rows": []
+      }
+    },
+    "35": {
+      "id": "35",
+      "type": "lab.flow.Sequence",
+      "children": [
+        "37",
+        "39",
+        "42"
+      ],
+      "files": {
+        "rows": []
+      },
+      "responses": {
+        "rows": [
+          [
+            "",
+            "",
+            "",
+            ""
+          ]
+        ]
+      },
+      "parameters": {
+        "rows": [
+          [
+            {
+              "name": "",
+              "value": "",
+              "type": "string"
+            }
+          ]
+        ]
+      },
+      "messageHandlers": {
+        "rows": [
+          [
+            {
+              "title": "get_response_key",
+              "message": "before:prepare",
+              "code": ""
+            }
+          ]
+        ]
+      },
+      "title": "Trial",
+      "_tab": "Scripts"
+    },
+    "36": {
+      "id": "36",
+      "type": "lab.html.Screen",
+      "parameters": {
+        "rows": [
+          [
+            {
+              "name": "",
+              "value": "",
+              "type": "string"
+            }
+          ]
+        ]
+      },
+      "responses": {
+        "rows": [
+          [
+            "end_button",
+            "click",
+            "button#end_button",
+            ""
+          ]
+        ]
+      },
+      "messageHandlers": {
+        "rows": [
+          [
+            {
+              "title": "new category",
+              "message": "before:prepare",
+              "code": "const el = this.options.el;    \r\nvar active = false;\r\nvar currentX;\r\nvar currentY; \r\nvar initialX;\r\nvar initialY;\r\nvar xOffset = 0;\r\nvar yOffset = 0;\r\nvar dragItem;  \r\n\r\nthis.options.events['mousedown'] = function(e) { \r\n  if (e.target.getAttribute('location')!=\"wordlist\") {\r\n  console.log(e.target.hasAttribute('active'))\r\n  console.log(e.target.getAttribute('initialX'))\r\n  console.log(e.target.getAttribute('xOffset'))\r\n    e.target.setAttribute('initialX', e.clientX - Number(e.target.getAttribute('xOffset')));\r\n    e.target.setAttribute('initialY',e.clientY - Number(e.target.getAttribute('yOffset')));      \r\n    if (e.target.classList.contains(\"item\")) {\r\n    e.target.setAttribute('active','true');\r\n    dragItem = e.target;\r\n    }\r\n  }\r\n  }\r\n\r\nthis.options.events['mouseup'] = function(e) { \r\n  e.target.setAttribute('initialX',e.target.getAttribute('currentX'));\r\n  e.target.setAttribute('initialY',e.target.getAttribute('currentY'));\r\n  e.target.removeAttribute('active') ;\r\n  dragItem=undefined;//drop the dragItem\r\n}\r\nthis.options.events['mousemove'] = function(e) { \r\n   if (dragItem!=undefined) {\r\n    e.preventDefault();          \r\n    dragItem.setAttribute('currentX', e.clientX - Number(dragItem.getAttribute('initialX')));\r\n    dragItem.setAttribute('currentY', e.clientY - Number(dragItem.getAttribute('initialY')));\r\n    dragItem.setAttribute('xOffset', dragItem.getAttribute('currentX'));\r\n    dragItem.setAttribute('yOffset', dragItem.getAttribute('currentY'));\r\n    setTranslate(dragItem.getAttribute('currentX'), dragItem.getAttribute('currentY'), dragItem);\r\n  }\r\n}\r\n\r\nfunction setTranslate(xPos, yPos, item) {\r\n  item.style.transform = \"translate3d(\" + xPos + \"px, \" + yPos + \"px, 0)\";\r\n  }\r\n\r\nmoveover = function (e){\r\n  if (e.target.getAttribute('location')==\"wordlist\"){\r\n    e.target.setAttribute('location','dropped')\r\n    el.querySelector('#droparea').appendChild(e.target)\r\n    e.target.setAttribute('style',\"position:absolute; top: 50px ;left:50px\")\r\n  }\r\n  if (el.querySelector('#droparea').children.length < 60){\r\n      el.querySelector('#end_button').disabled = true;\r\n    } else {\r\n      el.querySelector('#end_button').disabled = false;\r\n    }\r\n}"
+            }
+          ],
+          [
+            {
+              "title": "prepare item list",
+              "message": "run",
+              "code": "const el = this.options.el;\r\n\r\n/* create items with loop */\r\n\r\nvar item_list = [\"TIMBER\", \"PASTURE\", \"CAPTAIN\", \"PIER\", \"CALCULATOR\", \"PILLOW\", \"AIRPLANE\", \"THIRST\", \"CASHEW\", \"CARDBOARD\", \"PEAR\", \"BANANA\", \"ALLIGATOR\", \"CARTON\", \"SCIENTIST\", \"SEAM\", \"LIGHTNING\", \"CHOWDER\", \"CALENDAR\", \"BUCKLE\", \"CLOTH\",\"GENDER\", \"SEMESTER\", \"PARENT\", \"ANCHOR\", \"CANOE\", \"PAINT\", \"LAWN\", \"ANTLER\", \"CHILDREN\", \"CLOCK\", \"PHONE\", \"LAKE\", \"TEMPERATURE\", \"CHICKEN\", \"WORLD\", \"EAT\", \"STONE\", \"HONEY\", \"CAR\", \"FOOD\", \"BED\", \"PUPPY\", \"MOVIE\", \"HALF\", \"STREET\", \"ARROW\", \"APARTMENT\", \"TIN\", \"SPACE\", \"HUT\", \"BREAD\", \"MOUNTAIN\", \"MONEY\", \"SUN\", \"FINGER\", \"KNIFE\", \"WOOD\", \"CAT\", \"DOG\"]\r\n\r\nitem_list = this.random.shuffle(item_list);\r\n\r\nvar i;\r\n//for (i = 0; i < item_list.length; i++)\r\nfor (i = 0; i < 60; i++) { \r\n    var item = document.createElement(\"div\");\r\n    var word = document.createTextNode(item_list[i]);\r\n    item.setAttribute('class', 'item');\r\n    item.setAttribute('onclick','moveover(event)')\r\n    //item.setAttribute('draggable', 'true');\r\n    //item.setAttribute('data-text',\"drag\");\r\n    item.setAttribute('id', 'word'+i);\r\n    item.setAttribute('word_name',item_list[i])  \r\n    item.setAttribute('xOffset',\"0\");\r\n    item.setAttribute('yOffset',\"0\");\r\n    item.setAttribute('initialX',\"0\");\r\n    item.setAttribute('initialY',\"0\");\r\n     item.setAttribute('currentX',\"0\");\r\n    item.setAttribute('currentY',\"0\");\r\n    item.setAttribute('location','wordlist')\r\n    item.appendChild(word);\r\n    el.querySelector('#wordlist').appendChild(item);\r\n}\r\n\r\n   "
+            }
+          ],
+          [
+            {
+              "title": "collect data",
+              "message": "end",
+              "code": "const ds3 = this.options.datastore;\nconst el = this.options.el;\n\nvar words = el.querySelector('#droparea').children;\n\nvar word_list = [];\nvar x_pos = [];\nvar y_pos = [];\nvar i;\nfor (i = 0; i < words.length; i++) { \nword_list.push(words[i].getAttribute('word_name'));\nx_pos.push(words[i].getAttribute('currentX'));\ny_pos.push(words[i].getAttribute('currentY'));\n}\n\nds3.set(\"word_names\", word_list);\nds3.set(\"x_pos\", x_pos);\nds3.set(\"y_pos\", y_pos);\n"
+            }
+          ]
+        ]
+      },
+      "title": "word arrangement 3",
+      "content": "<main class=\"content-horizontal-center content-vertical-center\">\r\n  \r\n  <div id=\"screen\">\r\n\r\n    \t<div id=\"wordlist\">\r\n\t    </div>\r\n\r\n      <div class = \"window_to_place dropzone\" id=\"droparea\">\r\n      </div>\r\n\r\n      \r\n  </div>\r\n</main>\r\n\r\n<footer class=\"content-vertical-center content-horizontal-left\">\r\n  Please click on a word to bring it over to the arrangement box, then arrange the words so that the words that are more related are closer together. When you are finished, please press the submit button:<br><br>\r\n  <button id=\"end_button\" name=\"end_button\" type=\"button\" disabled> Submit Arrangement </button>\r\n  \r\n</footer>",
+      "_tab": "Scripts",
+      "tardy": true,
+      "files": {
+        "rows": []
+      }
+    },
+    "37": {
+      "id": "37",
+      "type": "lab.canvas.Screen",
+      "content": [
+        {
+          "type": "i-text",
+          "version": "3.5.1",
+          "originX": "center",
+          "originY": "center",
+          "left": 0,
+          "top": 0,
+          "width": 18.69,
+          "height": 36.16,
+          "fill": "black",
+          "stroke": null,
+          "strokeWidth": 1,
+          "strokeDashArray": null,
+          "strokeLineCap": "butt",
+          "strokeDashOffset": 0,
+          "strokeLineJoin": "round",
+          "strokeMiterLimit": 4,
+          "scaleX": 1,
+          "scaleY": 1,
+          "angle": 0,
+          "flipX": false,
+          "flipY": false,
+          "opacity": 1,
+          "shadow": null,
+          "visible": true,
+          "clipTo": null,
+          "backgroundColor": "",
+          "fillRule": "nonzero",
+          "paintFirst": "fill",
+          "globalCompositeOperation": "source-over",
+          "transformMatrix": null,
+          "skewX": 0,
+          "skewY": 0,
+          "text": "+",
+          "fontSize": 32,
+          "fontWeight": "normal",
+          "fontFamily": "sans-serif",
+          "fontStyle": "normal",
+          "lineHeight": 1.16,
+          "underline": false,
+          "overline": false,
+          "linethrough": false,
+          "textAlign": "center",
+          "textBackgroundColor": "",
+          "charSpacing": 0,
+          "id": "52",
+          "styles": {}
+        }
+      ],
+      "viewport": [
+        800,
+        600
+      ],
+      "files": {
+        "rows": []
+      },
+      "responses": {
+        "rows": [
+          [
+            "",
+            "",
+            "",
+            ""
+          ]
+        ]
+      },
+      "parameters": {
+        "rows": [
+          [
+            {
+              "name": "",
+              "value": "",
+              "type": "string"
+            }
+          ]
+        ]
+      },
+      "messageHandlers": {
+        "rows": [
+          [
+            {
+              "title": "",
+              "message": "",
+              "code": ""
+            }
+          ]
+        ]
+      },
+      "title": "Fixation",
+      "_tab": "Scripts",
+      "timeout": "500"
+    },
+    "38": {
+      "id": "38",
+      "type": "lab.html.Screen",
+      "parameters": {
+        "rows": [
+          [
+            {
+              "name": "",
+              "value": "",
+              "type": "string"
+            }
+          ]
+        ]
+      },
+      "responses": {
+        "rows": [
+          [
+            "end_button",
+            "click",
+            "button#end_button",
+            ""
+          ]
+        ]
+      },
+      "messageHandlers": {
+        "rows": [
+          [
+            {
+              "title": "new category",
+              "message": "before:prepare",
+              "code": "const el = this.options.el;    \r\nvar active = false;\r\nvar currentX;\r\nvar currentY; \r\nvar initialX;\r\nvar initialY;\r\nvar xOffset = 0;\r\nvar yOffset = 0;\r\nvar dragItem;  \r\n\r\nthis.options.events['mousedown'] = function(e) { \r\n  if (e.target.getAttribute('location')!=\"wordlist\") {\r\n  console.log(e.target.hasAttribute('active'))\r\n  console.log(e.target.getAttribute('initialX'))\r\n  console.log(e.target.getAttribute('xOffset'))\r\n    e.target.setAttribute('initialX', e.clientX - Number(e.target.getAttribute('xOffset')));\r\n    e.target.setAttribute('initialY',e.clientY - Number(e.target.getAttribute('yOffset')));      \r\n    if (e.target.classList.contains(\"item\")) {\r\n    e.target.setAttribute('active','true');\r\n    dragItem = e.target;\r\n    }\r\n  }\r\n  }\r\n\r\nthis.options.events['mouseup'] = function(e) { \r\n  e.target.setAttribute('initialX',e.target.getAttribute('currentX'));\r\n  e.target.setAttribute('initialY',e.target.getAttribute('currentY'));\r\n  e.target.removeAttribute('active') ;\r\n  dragItem=undefined;//drop the dragItem\r\n}\r\nthis.options.events['mousemove'] = function(e) { \r\n   if (dragItem!=undefined) {\r\n    e.preventDefault();          \r\n    dragItem.setAttribute('currentX', e.clientX - Number(dragItem.getAttribute('initialX')));\r\n    dragItem.setAttribute('currentY', e.clientY - Number(dragItem.getAttribute('initialY')));\r\n    dragItem.setAttribute('xOffset', dragItem.getAttribute('currentX'));\r\n    dragItem.setAttribute('yOffset', dragItem.getAttribute('currentY'));\r\n    setTranslate(dragItem.getAttribute('currentX'), dragItem.getAttribute('currentY'), dragItem);\r\n  }\r\n}\r\n\r\nfunction setTranslate(xPos, yPos, item) {\r\n  item.style.transform = \"translate3d(\" + xPos + \"px, \" + yPos + \"px, 0)\";\r\n  }\r\n\r\nmoveover = function (e){\r\n  if (e.target.getAttribute('location')==\"wordlist\"){\r\n    e.target.setAttribute('location','dropped')\r\n    el.querySelector('#droparea').appendChild(e.target)\r\n    e.target.setAttribute('style',\"position:absolute; top: 50px ;left:50px\")\r\n  }\r\n  if (el.querySelector('#droparea').children.length < 60){\r\n      el.querySelector('#end_button').disabled = true;\r\n    } else {\r\n      el.querySelector('#end_button').disabled = false;\r\n    }\r\n}"
+            }
+          ],
+          [
+            {
+              "title": "prepare item list",
+              "message": "run",
+              "code": "const el = this.options.el;\r\n\r\n/* create items with loop */\r\n\r\nvar item_list = [\"TIME\", \"GIFT\", \"BARN\", \"JACKET\", \"TEACHER\", \"PECAN\", \"CAVERN\", \"PEBBLE\", \"BEE\", \"BRAKE\", \"CHEF\", \"BLANKET\", \"PAD\", \"ARMOR\", \"BUTLER\", \"PAVEMENT\", \"ARTERY\", \"LEASE\", \"CELLAR\", \"CIRCUS\", \"LENGTH\", \"BUN\", \"CLIFF\", \"LOAN\", \"BEACH\", \"THIMBLE\", \"BLADE\", \"BUTTERFLY\", \"TIGER\", \"BOUQUET\",\"TREE\", \"COW\", \"FRIEND\", \"MEAT\", \"MATH\", \"SLEEP\", \"HOUSE\", \"HUNGER\", \"SKIN\", \"PAPER\", \"ANIMAL\", \"BOSS\", \"NURSE\", \"MILK\", \"RIVER\", \"PANTS\", \"HAIR\", \"BOOK\", \"DAY\", \"SHOE\", \"WHEEL\", \"FEMALE\", \"JOB\", \"MOTHER\", \"BOAT\", \"WATER\", \"COLOR\", \"ELECTRICITY\", \"LOVE\", \"BIRD\"]\r\n\r\nitem_list = this.random.shuffle(item_list);\r\n\r\nvar i;\r\n//for (i = 0; i < item_list.length; i++)\r\nfor (i = 0; i < 60; i++) { \r\n    var item = document.createElement(\"div\");\r\n    var word = document.createTextNode(item_list[i]);\r\n    item.setAttribute('class', 'item');\r\n    item.setAttribute('onclick','moveover(event)')\r\n    //item.setAttribute('draggable', 'true');\r\n    //item.setAttribute('data-text',\"drag\");\r\n    item.setAttribute('id', 'word'+i);\r\n    item.setAttribute('word_name',item_list[i])  \r\n    item.setAttribute('xOffset',\"0\");\r\n    item.setAttribute('yOffset',\"0\");\r\n    item.setAttribute('initialX',\"0\");\r\n    item.setAttribute('initialY',\"0\");\r\n     item.setAttribute('currentX',\"0\");\r\n    item.setAttribute('currentY',\"0\");\r\n    item.setAttribute('location','wordlist')\r\n    item.appendChild(word);\r\n    el.querySelector('#wordlist').appendChild(item);\r\n}\r\n\r\n   "
+            }
+          ],
+          [
+            {
+              "title": "collect data",
+              "message": "end",
+              "code": "const ds4 = this.options.datastore;\nconst el = this.options.el;\n\nvar words = el.querySelector('#droparea').children;\n\nvar word_list = [];\nvar x_pos = [];\nvar y_pos = [];\nvar i;\nfor (i = 0; i < words.length; i++) { \nword_list.push(words[i].getAttribute('word_name'));\nx_pos.push(words[i].getAttribute('currentX'));\ny_pos.push(words[i].getAttribute('currentY'));\n}\n\nds4.set(\"word_names\", word_list);\nds4.set(\"x_pos\", x_pos);\nds4.set(\"y_pos\", y_pos);\n"
+            }
+          ]
+        ]
+      },
+      "title": "word arrangement 4",
+      "content": "<main class=\"content-horizontal-center content-vertical-center\">\r\n  \r\n  <div id=\"screen\">\r\n\r\n    \t<div id=\"wordlist\">\r\n\t    </div>\r\n\r\n      <div class = \"window_to_place dropzone\" id=\"droparea\">\r\n      </div>\r\n\r\n      \r\n  </div>\r\n</main>\r\n\r\n<footer class=\"content-vertical-center content-horizontal-left\">\r\n  Please click on a word to bring it over to the arrangement box, then arrange the words so that the words that are more related are closer together. When you are finished, please press the submit button:<br><br>\r\n  <button id=\"end_button\" name=\"end_button\" type=\"button\" disabled> Submit Arrangement </button>\r\n  \r\n</footer>",
+      "_tab": "Scripts",
+      "tardy": true,
+      "files": {
+        "rows": []
+      }
+    },
+    "39": {
+      "id": "39",
+      "type": "lab.html.Form",
+      "content": "<main class=\"content-horizontal-center content-vertical-center\">\n\n  <form>\n\n    <table class=\"table-plain stimulus\" style=\"font-size: 2rem;\">\n      <tr>\n      <td style=\"width: 200px\">${ parameters.cue }</td>\n      <td> &mdash; </td>\n      <td style=\"width: 200px\">${ parameters.show }</td>\n      </tr>\n      <tr>\n        <td></td>\n        <td>\n          <input type=\"text\" name=\"response\" autocomplete=\"off\" style=\"width: 200px\" autofocus>\n          </td>\n          <td></td>\n      </tr>\n      <tr>\n        <td></td>\n        <td>\n          <button type=\"submit\">Submit</button>\n        </td>\n        <td></td>\n      </tr>\n    </table>\n\n  </form>\n</main>\n\n<footer>\n  Please enter the second word in the provided field.\n</footer>",
+      "scrollTop": true,
+      "files": {
+        "rows": []
+      },
+      "responses": {
+        "rows": [
+          [
+            "",
+            "",
+            "",
+            ""
+          ]
+        ]
+      },
+      "parameters": {
+        "rows": [
+          [
+            {
+              "name": "",
+              "value": "",
+              "type": "string"
+            }
+          ]
+        ]
+      },
+      "messageHandlers": {
+        "rows": [
+          [
+            {
+              "title": "change_show",
+              "message": "before:prepare",
+              "code": "if (this.parameters[\"group\"] == test_group)\n{ this.parameters[\"show\"] = \"????\" }"
+            }
+          ]
+        ]
+      },
+      "title": "response",
+      "_tab": "Content",
+      "timeout": ""
+    },
+    "40": {
+      "id": "40",
+      "type": "lab.flow.Sequence",
+      "children": [
+        "41"
+      ],
+      "files": {
+        "rows": []
+      },
+      "responses": {
+        "rows": [
+          [
+            "",
+            "",
+            "",
+            ""
+          ]
+        ]
+      },
+      "parameters": {
+        "rows": [
+          [
+            {
+              "name": "",
+              "value": "",
+              "type": "string"
+            }
+          ]
+        ]
+      },
+      "messageHandlers": {
+        "rows": [
+          [
+            {
+              "title": "",
+              "message": "",
+              "code": ""
+            }
+          ]
+        ]
+      },
+      "title": "arrangment instructions",
+      "_tab": "Content"
+    },
+    "41": {
+      "id": "41",
+      "type": "lab.canvas.Screen",
+      "content": [
+        {
+          "type": "i-text",
+          "version": "3.5.1",
+          "originX": "center",
+          "originY": "center",
+          "left": 0,
+          "top": 0,
+          "width": 1035.14,
+          "height": 530.47,
+          "fill": "black",
+          "stroke": null,
+          "strokeWidth": 1,
+          "strokeDashArray": null,
+          "strokeLineCap": "butt",
+          "strokeDashOffset": 0,
+          "strokeLineJoin": "round",
+          "strokeMiterLimit": 4,
+          "scaleX": 1,
+          "scaleY": 1,
+          "angle": 0,
+          "flipX": false,
+          "flipY": false,
+          "opacity": 1,
+          "shadow": null,
+          "visible": true,
+          "clipTo": null,
+          "backgroundColor": "",
+          "fillRule": "nonzero",
+          "paintFirst": "fill",
+          "globalCompositeOperation": "source-over",
+          "transformMatrix": null,
+          "skewX": 0,
+          "skewY": 0,
+          "text": "For the first part of the experiment, you will be asked to judge the similarity of a number of words. \n\nTo do so, please click on a word from the list on the left to bring it to the main box. \nFrom there, you can click and drag the word as many times as you'd like until \nyou're happy with its placement. \n\nYou should place the words so that words that are more similar are closer together and words \nthat are less similar are farther apart. \n\nThere is no time limit for this task, so please take your time \nand think carefully about how you arrange the words. \n\nWhen you are happy with your arrangment of the words, please press the \"submit arrangment\" \nbutton at the bottom of your screen. \n\nYou will complete 4 trials of this task. \nWhen you are ready to begin, please press the SPACE bar to start the task. ",
+          "fontSize": "24",
+          "fontWeight": "normal",
+          "fontFamily": "sans-serif",
+          "fontStyle": "normal",
+          "lineHeight": 1.16,
+          "underline": false,
+          "overline": false,
+          "linethrough": false,
+          "textAlign": "center",
+          "textBackgroundColor": "",
+          "charSpacing": 0,
+          "id": "27",
+          "styles": {}
+        }
+      ],
+      "viewport": [
+        800,
+        600
+      ],
+      "files": {
+        "rows": []
+      },
+      "responses": {
+        "rows": [
+          [
+            "continue",
+            "keypress",
+            "",
+            "Space"
+          ]
+        ]
+      },
+      "parameters": {
+        "rows": [
+          [
+            {
+              "name": "",
+              "value": "",
+              "type": "string"
+            }
+          ]
+        ]
+      },
+      "messageHandlers": {
+        "rows": [
+          [
+            {
+              "title": "",
+              "message": "",
+              "code": ""
+            }
+          ]
+        ]
+      },
+      "title": "arrangement instructions",
+      "_tab": "Content"
+    },
+    "42": {
+      "id": "42",
+      "type": "lab.canvas.Screen",
+      "content": [],
+      "viewport": [
+        800,
+        600
+      ],
+      "files": {
+        "rows": []
+      },
+      "responses": {
+        "rows": [
+          [
+            "",
+            "",
+            "",
+            ""
+          ]
+        ]
+      },
+      "parameters": {
+        "rows": [
+          [
+            {
+              "name": "",
+              "value": "",
+              "type": "string"
+            }
+          ]
+        ]
+      },
+      "messageHandlers": {
+        "rows": [
+          [
+            {
+              "title": "",
+              "message": "",
+              "code": ""
+            }
+          ]
+        ]
+      },
+      "title": "ITI",
+      "_tab": "Behavior",
+      "timeout": "2000"
+    },
+    "44": {
+      "id": "44",
+      "type": "lab.flow.Sequence",
+      "children": [
+        "31"
+      ],
+      "files": {
+        "rows": []
+      },
+      "responses": {
+        "rows": [
+          [
+            "",
+            "",
+            "",
+            ""
+          ]
+        ]
+      },
+      "parameters": {
+        "rows": [
+          [
+            {
+              "name": "",
+              "value": "",
+              "type": "string"
+            }
+          ]
+        ]
+      },
+      "messageHandlers": {
+        "rows": [
+          [
+            {
+              "title": "change_show",
+              "message": "before:prepare",
+              "code": "test_group = this.random.choice(['A','B'])"
+            }
+          ]
+        ]
+      },
+      "title": "Test/Study Sequence",
+      "_tab": "Content"
+    },
+    "53": {
+      "id": "53",
+      "type": "lab.html.Form",
+      "content": "<main>\n\n<form>\n  <p> Thank you for participating in the first part of our experiment. <br>\n    Before you finish, please help us by telling us whether, in your opinion, we should use your data. </p>\n  <p> Your responses here will have NO impact on your compensation. </p>\n  <input name=\"use_data\" type = \"radio\" value = \"Yes\"> Yes\n  <input name=\"use_data\" type = \"radio\" value = \"No\"> No\n\n  <p> If you said no, please tell us why. </p>\n  <input name = \"reason_why\" type=text size=\"50\" height = \"30\"> \n\n  <p> Did any of the following distractions occur while you were completing this task? </p> \n\n  <input name = \"list_distractions_TV\" type = \"checkbox\" value = \"1\"> TV/movies in background <br>\n  <input name = \"list_distractions_person\" type = \"checkbox\" value = \"1\"> People talking around you <br>\n  <input name = \"list_distractions_internet\" type = \"checkbox\" value = \"1\"> Doing other things on the web <br>\n  <input name = \"list_distractions_music\" type = \"checkbox\" value = \"1\"> Music playing around you <br>\n  <input name = \"list_distractions_work\" type = \"checkbox\" value = \"1\"> Working <br> \n  <input name = \"list_distractions_phone\" type = \"checkbox\" value = \"1\"> Phone ringing <br> \n  <input name = \"list_distractions_door\" type = \"checkbox\" value = \"1\"> Doorbell rang <br> \n  Other distraction (please type in): <input name = \"other_distraction\" type=text size=\"30\"> \n\n  <p> How distracted were you during this task? </p>\n  Not at all distracted <input name = \"how_distracted\", type= \"range\" min = 1, max =10> Very distracted\n  <br> <br>\n  <button type=\"submit\">Submit</button>\n</form>\n\n</main>",
+      "scrollTop": true,
+      "files": {
+        "rows": []
+      },
+      "responses": {
+        "rows": [
+          [
+            "",
+            "",
+            "",
+            ""
+          ]
+        ]
+      },
+      "parameters": {
+        "rows": [
+          [
+            {
+              "name": "",
+              "value": "",
+              "type": "string"
+            }
+          ]
+        ]
+      },
+      "messageHandlers": {
+        "rows": [
+          [
+            {
+              "title": "",
+              "message": "",
+              "code": ""
+            }
+          ]
+        ]
+      },
+      "title": "Distraction Questionnaire",
+      "_tab": "Content"
+    },
+    "58": {
+      "id": "58",
+      "type": "lab.flow.Loop",
+      "children": [
+        "12"
+      ],
+      "templateParameters": {
+        "columns": [
+          {
+            "name": "cue",
+            "type": "string"
+          },
+          {
+            "name": "target",
+            "type": "string"
+          },
+          {
+            "name": "relatedness",
+            "type": "string"
+          },
+          {
+            "name": "show",
+            "type": "string"
+          },
+          {
+            "name": "group",
+            "type": "string"
+          }
+        ],
+        "rows": [
+          [
+            "BEACH",
+            "SUN",
+            "related",
+            "SUN",
+            "B"
+          ],
+          [
+            "GENDER",
+            "FEMALE",
+            "related",
+            "FEMALE",
+            "A"
+          ],
+          [
+            "CANOE",
+            "WATER",
+            "related",
+            "WATER",
+            "A"
+          ],
+          [
+            "PILLOW",
+            "SLEEP",
+            "related",
+            "SLEEP",
+            "A"
+          ],
+          [
+            "SEAM",
+            "PANTS",
+            "related",
+            "PANTS",
+            "A"
+          ],
+          [
+            "CARTON",
+            "MILK",
+            "related",
+            "MILK",
+            "B"
+          ],
+          [
+            "THIRST",
+            "HUNGER",
+            "related",
+            "HUNGER",
+            "A"
+          ],
+          [
+            "CLIFF",
+            "MOUNTAIN",
+            "related",
+            "MOUNTAIN",
+            "A"
+          ],
+          [
+            "BUN",
+            "BREAD",
+            "related",
+            "BREAD",
+            "A"
+          ],
+          [
+            "BLADE",
+            "KNIFE",
+            "related",
+            "KNIFE",
+            "A"
+          ],
+          [
+            "PARENT",
+            "MOTHER",
+            "related",
+            "MOTHER",
+            "A"
+          ],
+          [
+            "CARDBOARD",
+            "PAPER",
+            "related",
+            "PAPER",
+            "B"
+          ],
+          [
+            "LOAN",
+            "MONEY",
+            "related",
+            "MONEY",
+            "B"
+          ],
+          [
+            "LEASE",
+            "APARTMENT",
+            "related",
+            "APARTMENT",
+            "B"
+          ],
+          [
+            "THIMBLE",
+            "FINGER",
+            "related",
+            "FINGER",
+            "B"
+          ],
+          [
+            "SCIENTIST",
+            "RIVER",
+            "unrelated",
+            "RIVER",
+            "A"
+          ],
+          [
+            "PIER",
+            "MEAT",
+            "unrelated",
+            "MEAT",
+            "A"
+          ],
+          [
+            "BOUQUET",
+            "DOG",
+            "unrelated",
+            "DOG",
+            "B"
+          ],
+          [
+            "PECAN",
+            "WORLD",
+            "unrelated",
+            "WORLD",
+            "B"
+          ],
+          [
+            "JACKET",
+            "TEMPERATURE",
+            "unrelated",
+            "TEMPERATURE",
+            "A"
+          ],
+          [
+            "ANTLER",
+            "LOVE",
+            "unrelated",
+            "LOVE",
+            "A"
+          ],
+          [
+            "CHOWDER",
+            "BOOK",
+            "unrelated",
+            "BOOK",
+            "A"
+          ],
+          [
+            "LIGHTNING",
+            "HAIR",
+            "unrelated",
+            "HAIR",
+            "A"
+          ],
+          [
+            "LAWN",
+            "ELECTRICITY",
+            "unrelated",
+            "ELECTRICITY",
+            "B"
+          ],
+          [
+            "CASHEW",
+            "SKIN",
+            "unrelated",
+            "SKIN",
+            "A"
+          ],
+          [
+            "TEACHER",
+            "CHICKEN",
+            "unrelated",
+            "CHICKEN",
+            "A"
+          ],
+          [
+            "GIFT",
+            "PHONE",
+            "unrelated",
+            "PHONE",
+            "A"
+          ],
+          [
+            "SEMESTER",
+            "JOB",
+            "unrelated",
+            "JOB",
+            "B"
+          ],
+          [
+            "CHILDREN",
+            "BIRD",
+            "unrelated",
+            "BIRD",
+            "B"
+          ],
+          [
+            "CIRCUS",
+            "SPACE",
+            "unrelated",
+            "SPACE",
+            "B"
+          ],
+          [
+            "PEBBLE",
+            "STONE",
+            "related",
+            "STONE",
+            "B"
+          ],
+          [
+            "TIME",
+            "CLOCK",
+            "related",
+            "CLOCK",
+            "B"
+          ],
+          [
+            "TIMBER",
+            "TREE",
+            "related",
+            "TREE",
+            "A"
+          ],
+          [
+            "BEE",
+            "HONEY",
+            "related",
+            "HONEY",
+            "A"
+          ],
+          [
+            "CALCULATOR",
+            "MATH",
+            "related",
+            "MATH",
+            "B"
+          ],
+          [
+            "BLANKET",
+            "BED",
+            "related",
+            "BED",
+            "A"
+          ],
+          [
+            "CALENDAR",
+            "DAY",
+            "related",
+            "DAY",
+            "B"
+          ],
+          [
+            "BUCKLE",
+            "SHOE",
+            "related",
+            "SHOE",
+            "B"
+          ],
+          [
+            "PASTURE",
+            "COW",
+            "related",
+            "COW",
+            "B"
+          ],
+          [
+            "ANCHOR",
+            "BOAT",
+            "related",
+            "BOAT",
+            "A"
+          ],
+          [
+            "BRAKE",
+            "CAR",
+            "related",
+            "CAR",
+            "B"
+          ],
+          [
+            "CHEF",
+            "FOOD",
+            "related",
+            "FOOD",
+            "A"
+          ],
+          [
+            "PAINT",
+            "COLOR",
+            "related",
+            "COLOR",
+            "B"
+          ],
+          [
+            "PAVEMENT",
+            "STREET",
+            "related",
+            "STREET",
+            "A"
+          ],
+          [
+            "TIGER",
+            "CAT",
+            "related",
+            "CAT",
+            "B"
+          ],
+          [
+            "BANANA",
+            "BOSS",
+            "unrelated",
+            "BOSS",
+            "A"
+          ],
+          [
+            "ARMOR",
+            "MOVIE",
+            "unrelated",
+            "MOVIE",
+            "B"
+          ],
+          [
+            "PAD",
+            "PUPPY",
+            "unrelated",
+            "PUPPY",
+            "A"
+          ],
+          [
+            "CELLAR",
+            "TIN",
+            "unrelated",
+            "TIN",
+            "B"
+          ],
+          [
+            "AIRPLANE",
+            "HOUSE",
+            "unrelated",
+            "HOUSE",
+            "A"
+          ],
+          [
+            "CAVERN",
+            "EAT",
+            "unrelated",
+            "EAT",
+            "B"
+          ],
+          [
+            "BUTTERFLY",
+            "WOOD",
+            "unrelated",
+            "WOOD",
+            "B"
+          ],
+          [
+            "LENGTH",
+            "HUT",
+            "unrelated",
+            "HUT",
+            "B"
+          ],
+          [
+            "BUTLER",
+            "HALF",
+            "unrelated",
+            "HALF",
+            "B"
+          ],
+          [
+            "PEAR",
+            "ANIMAL",
+            "unrelated",
+            "ANIMAL",
+            "A"
+          ],
+          [
+            "ALLIGATOR",
+            "NURSE",
+            "unrelated",
+            "NURSE",
+            "A"
+          ],
+          [
+            "CAPTAIN",
+            "FRIEND",
+            "unrelated",
+            "FRIEND",
+            "A"
+          ],
+          [
+            "ARTERY",
+            "ARROW",
+            "unrelated",
+            "ARROW",
+            "B"
+          ],
+          [
+            "BARN",
+            "LAKE",
+            "unrelated",
+            "LAKE",
+            "B"
+          ],
+          [
+            "CLOTH",
+            "WHEEL",
+            "unrelated",
+            "WHEEL",
+            "B"
+          ],
+          [
+            "Please press this key",
+            "2",
+            "unrelated",
+            "2",
+            "C"
+          ]
+        ]
+      },
+      "sample": {
+        "mode": "draw-shuffle",
+        "n": ""
+      },
+      "files": {
+        "rows": []
+      },
+      "responses": {
+        "rows": [
+          [
+            "",
+            "",
+            "",
+            ""
+          ]
+        ]
+      },
+      "parameters": {
+        "rows": [
+          [
+            {
+              "name": "",
+              "value": "",
+              "type": "string"
+            }
+          ]
+        ]
+      },
+      "messageHandlers": {
+        "rows": [
+          [
+            {
+              "title": "",
+              "message": "",
+              "code": ""
+            }
+          ]
+        ]
+      },
+      "title": "Loop",
+      "_tab": "Content"
+    },
+    "73": {
+      "id": "73",
+      "type": "lab.html.Form",
+      "content": "<main class=\"content-horizontal-center content-vertical-center\"> \n  <table class=\"table-plain w-m\" style=\"font-size: 2rem;\">\n    <tr>\n      <td style=\"width: 200px\">${ parameters.cue }</td>\n      <td> &mdash; </td>\n      <td style=\"width: 200px\">${ parameters.target }</td>\n    </tr>\n  </table>  \n</main>\n\n<footer>\n  How related are the words in the pair? <br>\n    1 - not related <br>\n    2 - weakly related <br>\n    3 - moderately related <br>\n    4 - strongly related <br>\n</footer>",
+      "scrollTop": true,
+      "files": {
+        "rows": []
+      },
+      "responses": {
+        "rows": [
+          [
+            "",
+            "",
+            "",
+            ""
+          ]
+        ]
+      },
+      "parameters": {
+        "rows": [
+          [
+            {
+              "name": "",
+              "value": "",
+              "type": "string"
+            }
+          ]
+        ]
+      },
+      "messageHandlers": {
+        "rows": [
+          [
+            {
+              "title": "get_key_press",
+              "message": "before:prepare",
+              "code": "let response = false\n\nthis.options.events['keypress'] = function(e) {\n  if (!response) {\n    response = true\n    this.data.response = e.key\n    this.data.reaction_time = e.timeStamp\n  }\n}\n\n"
+            }
+          ]
+        ]
+      },
+      "title": "practice pair",
+      "_tab": "Content",
+      "timeout": "4000"
+    },
+    "79": {
+      "id": "79",
+      "type": "lab.html.Page",
+      "items": {
+        "rows": [
+          [
+            {
+              "type": "text",
+              "title": "Instructions check ",
+              "content": "Please answer the following questions to make sure you understand the task"
+            }
+          ],
+          [
+            {
+              "required": true,
+              "type": "radio",
+              "options": [
+                {
+                  "label": "How much the words in the pair rhyme",
+                  "coding": "rhyme"
+                },
+                {
+                  "label": "How related the words in the pair are",
+                  "coding": "related"
+                },
+                {
+                  "coding": "valence",
+                  "label": "If both words have the same valence"
+                },
+                {
+                  "label": "How likely I am to remember the words in the pair",
+                  "coding": "remember"
+                }
+              ],
+              "shuffle": true,
+              "label": "In this task, I am making judgements on:",
+              "name": "judgements_on"
+            }
+          ]
+        ]
+      },
+      "scrollTop": true,
+      "submitButtonText": "Continue →",
+      "submitButtonPosition": "right",
+      "files": {
+        "rows": []
+      },
+      "responses": {
+        "rows": [
+          [
+            "",
+            "",
+            "",
+            ""
+          ]
+        ]
+      },
+      "parameters": {
+        "rows": [
+          [
+            {
+              "name": "",
+              "value": "",
+              "type": "string"
+            }
+          ]
+        ]
+      },
+      "messageHandlers": {
+        "rows": [
+          [
+            {
+              "title": "",
+              "message": "before:prepare",
+              "code": "this.options.validator = data => {\n  const isValid = data.judgements_on == 'related'\n    \nif (!isValid){\n  alert(\"Please check your answer and try again\")\n}\nreturn isValid\n}\n\n"
+            }
+          ]
+        ]
+      },
+      "title": "Instructions check - judgement",
+      "_tab": "Content"
+    },
+    "83": {
+      "id": "83",
+      "type": "lab.html.Page",
+      "items": {
+        "rows": [
+          [
+            {
+              "type": "text",
+              "title": "Instructions check ",
+              "content": "Please answer the following questions to make sure you understand the task"
+            }
+          ],
+          [
+            {
+              "required": true,
+              "type": "radio",
+              "options": [
+                {
+                  "label": "Thinking about my response",
+                  "coding": "think"
+                },
+                {
+                  "label": "Pressing a letter on the keyboard",
+                  "coding": "letter"
+                },
+                {
+                  "coding": "number",
+                  "label": "Pressing a number on the keyboard"
+                }
+              ],
+              "shuffle": true,
+              "label": "I will make responses by",
+              "name": "how_to_respond"
+            }
+          ]
+        ]
+      },
+      "scrollTop": true,
+      "submitButtonText": "Continue →",
+      "submitButtonPosition": "right",
+      "files": {
+        "rows": []
+      },
+      "responses": {
+        "rows": [
+          [
+            "",
+            "",
+            "",
+            ""
+          ]
+        ]
+      },
+      "parameters": {
+        "rows": [
+          [
+            {
+              "name": "",
+              "value": "",
+              "type": "string"
+            }
+          ]
+        ]
+      },
+      "messageHandlers": {
+        "rows": [
+          [
+            {
+              "title": "",
+              "message": "before:prepare",
+              "code": "this.options.validator = data2 => {\n  const isValid = data2.how_to_respond == \"number\"\n    \nif (!isValid){\n  alert(\"Please check your answer and try again\")\n}\nreturn isValid\n}\n\n"
+            }
+          ]
+        ]
+      },
+      "title": "Instructions check - response",
+      "_tab": "Content"
+    },
+    "84": {
+      "id": "84",
+      "type": "lab.html.Page",
+      "items": {
+        "rows": [
+          [
+            {
+              "type": "text",
+              "title": "Instructions check ",
+              "content": "Please answer the following questions to make sure you understand the task"
+            }
+          ],
+          [
+            {
+              "required": true,
+              "type": "radio",
+              "options": [
+                {
+                  "label": "type in the second word on ALL trials",
+                  "coding": "all_pairs"
+                },
+                {
+                  "label": "just think about the second word",
+                  "coding": "think"
+                },
+                {
+                  "coding": "not_shown",
+                  "label": "type in the second word only when it isn't shown"
+                },
+                {
+                  "label": "type the first word",
+                  "coding": "first"
+                }
+              ],
+              "shuffle": true,
+              "label": "To respond on these trials, I will:",
+              "name": "how_respond"
+            }
+          ]
+        ]
+      },
+      "scrollTop": true,
+      "submitButtonText": "Continue →",
+      "submitButtonPosition": "right",
+      "files": {
+        "rows": []
+      },
+      "responses": {
+        "rows": [
+          [
+            "",
+            "",
+            "",
+            ""
+          ]
+        ]
+      },
+      "parameters": {
+        "rows": [
+          [
+            {
+              "name": "",
+              "value": "",
+              "type": "string"
+            }
+          ]
+        ]
+      },
+      "messageHandlers": {
+        "rows": [
+          [
+            {
+              "title": "",
+              "message": "before:prepare",
+              "code": "this.options.validator = data => {\n  const isValid = data.how_respond == 'all_pairs'\n    \nif (!isValid){\n  alert(\"Please check your answer and try again\")\n}\nreturn isValid\n}\n\n"
+            }
+          ]
+        ]
+      },
+      "title": "Instructions check - reponse",
+      "_tab": "Content"
+    },
+    "root": {
+      "id": "root",
+      "title": "root",
+      "type": "lab.flow.Sequence",
+      "children": [
+        "29",
+        "1",
+        "27",
+        "40",
+        "11",
+        "2",
+        "20",
+        "53",
+        "24"
+      ],
+      "parameters": {
+        "rows": [
+          [
+            {
+              "name": "",
+              "value": "",
+              "type": "string"
+            }
+          ]
+        ]
+      },
+      "plugins": [
+        {
+          "type": "lab.plugins.Metadata"
+        }
+      ],
+      "metadata": {
+        "title": "",
+        "description": "",
+        "repository": "",
+        "contributors": ""
+      }
+    }
+  },
+  "version": [
+    20,
+    1,
+    1
+  ],
+  "files": {
+    "files": {
+      "index.html": {
+        "content": "data:text/html,%3C!doctype%20html%3E%0A%3Chtml%3E%0A%3Chead%3E%0A%20%20%3Cmeta%20charset%3D%22utf-8%22%3E%0A%20%20%3Ctitle%3EExperiment%3C%2Ftitle%3E%0A%20%20%3C!--%20viewport%20setup%20--%3E%0A%20%20%3Cmeta%20name%3D%22viewport%22%20content%3D%22width%3Ddevice-width%2C%20initial-scale%3D1%22%3E%0A%20%20%3C!--%20lab.js%20library%20and%20experiment%20code%20--%3E%0A%20%20%24%7B%20header%20%7D%0A%3C%2Fhead%3E%0A%3Cbody%3E%0A%20%20%3C!--%20If%20you'd%20rather%20have%20a%20container%20with%20a%20fixed%20width%0A%20%20%20%20%20%20%20and%20variable%20height%2C%20try%20removing%20the%20fullscreen%20class%20below%20--%3E%0A%20%20%3Cdiv%20class%3D%22container%20fullscreen%22%20data-labjs-section%3D%22main%22%3E%0A%20%20%20%20%3Cmain%20class%3D%22content-vertical-center%20content-horizontal-center%22%3E%0A%20%20%20%20%20%20%3Cdiv%3E%0A%20%20%20%20%20%20%20%20%3Ch2%3ELoading%20Experiment%3C%2Fh2%3E%0A%20%20%20%20%20%20%20%20%3Cp%3EThe%20experiment%20is%20loading%20and%20should%20start%20in%20a%20few%20seconds%3C%2Fp%3E%0A%20%20%20%20%20%20%3C%2Fdiv%3E%0A%20%20%20%20%3C%2Fmain%3E%0A%20%20%3C%2Fdiv%3E%0A%3C%2Fbody%3E%0A%3C%2Fhtml%3E%0A",
+        "source": "library"
+      },
+      "style.css": {
+        "content": "data:text/css,%2F*%20Please%20define%20your%20custom%20styles%20here%20*%2F%2F*%20Please%20define%20your%20custom%20styles%20here%20*%2F%0A%0A.container.fullscreen%7B%0A%09margin%3A%2012px%208px%3B%0A%7D%0A%0Ahtml%20%7B%0A%09user-select%3A%20none%3B%0A%7D%0A%0Amain%20%7B%0A%09padding%3A%200%3B%0A%7D%0A%0Afooter%20%7B%0A%09padding%3A%200%3B%0A%09%0A%7D%0A%0A%23screen%20%7B%0A%09display%3A%20flex%3B%0A%09flex-direction%3A%20row%3B%0A%09justify-content%3A%20space-around%3B%0A%09align-items%3A%20center%3B%0A%09height%3A85vh%3B%0A%09padding%3A%2010px%3B%0A%7D%0A%0A%5Bdraggable%3Dtrue%5D%20%7B%0A%09cursor%3A%20move%3B%0A%7D%0A%0A%23wordlist%20%7B%0A%09display%3A%20flex%3B%0A%09flex-direction%3A%20row%3B%0A%09justify-content%3A%20flex-start%3B%0A%09align-content%3A%20flex-start%3B%0A%09flex-wrap%3A%20wrap%3B%0A%09overflow%3A%20scroll%3B%0A%09min-height%3A%2085vh%3B%0A%09max-height%3A%2085vh%3B%0A%09width%3A%2020vw%3B%0A%09max-width%3A%20260px%3B%0A%09border%3A%20solid%20black%201px%3B%0A%7D%0A%0A.item%20%7B%0A%09border%3A%201px%20solid%20lightgrey%3B%0A%09width%3A%20105px%3B%0A%09min-height%3A%2040px%3B%0A%09height%3A%2040px%3B%0A%09display%3A%20flex%3B%0A%09justify-content%3A%20center%3B%0A%09align-items%3A%20center%3B%0A%09order%3A%201%3B%0A%09margin%3A%2010px%3B%0A%09padding%3A%200%203px%3B%0A%09font-weight%3A%20bold%3B%0A%09font-size%3A%200.75rem%3B%0A%7D%0A.item%3Ahover%20%7B%0A%20%20border-width%3A%2020px%3B%0A%7D%0A%0A%0A%23window_to_place%20%7B%0A%09display%3A%20flex%3B%0A%09flex-direction%3A%20row%3B%0A%09justify-content%3A%20space-between%3B%0A%09align-items%3A%20center%3B%0A%09border%3A%20solid%20lightgrey%201px%3B%0A%09border-radius%3A%2025px%3B%0A%09height%3A%2080vh%3B%0A%09width%3A80vw%3B%0A%09padding%3A%200%2020px%3B%0A%7D%0A%0A.window_to_place%20%7B%0A%09display%3A%20flex-start%3B%0A%09flex-direction%3A%20row%3B%0A%09border%3A%20solid%20lightgrey%201px%3B%0A%09border-radius%3A%2025px%3B%0A%09height%3A%2085vh%3B%0A%09width%3A78vw%3B%0A%09padding%3A%200%2020px%3B%0A%09position%3Arelative%3B%0A%7D%0A",
+        "source": "library"
+      }
+    },
+    "bundledFiles": {
+      "lib/lab.js": {
+        "type": "application/javascript"
+      },
+      "lib/lab.js.map": {
+        "type": "text/plain"
+      },
+      "lib/lab.fallback.js": {
+        "type": "application/javascript"
+      },
+      "lib/lab.legacy.js": {
+        "type": "application/javascript"
+      },
+      "lib/lab.legacy.js.map": {
+        "type": "text/plain"
+      },
+      "lib/lab.css": {
+        "type": "text/css"
+      },
+      "lib/loading.svg": {
+        "type": "image/svg+xml"
+      }
+    }
+  }
+}
